@@ -7,10 +7,11 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>About kuromoka / Web Engineer</title>
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     </head>
     <body>
         <div id="app">
-            <example-component></example-component>
+            <app-component></app-component>
         </div>
         <script src=" {{ mix('js/app.js') }} "></script>
     </body>
