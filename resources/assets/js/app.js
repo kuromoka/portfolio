@@ -9,8 +9,14 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import Vuetify from 'vuetify';
+import colors from 'vuetify/es5/util/colors'
 import 'vuetify/dist/vuetify.min.css';
-window.Vue.use(Vuetify);
+
+window.Vue.use(Vuetify, {
+    theme: {
+        primary: colors.teal.darken1,
+    }
+});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
