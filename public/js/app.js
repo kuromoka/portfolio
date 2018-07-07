@@ -67885,20 +67885,35 @@ var render = function() {
   return _c(
     "v-app",
     [
-      _c("v-navigation-drawer", { attrs: { app: "" } }),
-      _vm._v(" "),
-      _c("v-toolbar", { attrs: { app: "" } }),
-      _vm._v(" "),
       _c(
-        "v-content",
+        "v-toolbar",
+        { attrs: { app: "" } },
         [
           _c(
-            "v-container",
-            { attrs: { fluid: "" } },
+            "v-layout",
+            { attrs: { row: "", wrap: "" } },
             [
-              _c("v-text-field", {
-                attrs: { label: "Regular", "single-line": "" }
-              })
+              _c(
+                "v-flex",
+                { attrs: { xs8: "", "offset-xs2": "" } },
+                [
+                  _c(
+                    "v-toolbar-items",
+                    { attrs: { "text-transform": "" } },
+                    [
+                      _c("v-btn", { attrs: { flat: "" } }, [_vm._v("Top")]),
+                      _vm._v(" "),
+                      _c("v-btn", { attrs: { flat: "" } }, [_vm._v("Career")]),
+                      _vm._v(" "),
+                      _c("v-btn", { attrs: { flat: "" } }, [_vm._v("Skills")]),
+                      _vm._v(" "),
+                      _c("v-btn", { attrs: { flat: "" } }, [_vm._v("Projects")])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           )
