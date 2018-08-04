@@ -68268,48 +68268,103 @@ var render = function() {
       ),
       _vm._v(" "),
       _c(
-        "v-jumbotron",
+        "v-content",
         [
           _c(
             "v-container",
-            { attrs: { "fill-height": "" } },
+            { attrs: { fluid: "" } },
             [
               _c(
                 "v-layout",
                 { attrs: { "align-center": "" } },
                 [
-                  _c("v-flex", { attrs: { "text-xs-center": "" } }, [
-                    _c("div", { staticClass: "display-3" }, [
-                      _vm._v("Welcome to my portfolio")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "headline" }, [
-                      _vm._v("Web Engineer")
-                    ])
-                  ])
+                  _c(
+                    "v-flex",
+                    { attrs: { xs6: "", "offset-xs3": "" } },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { "align-center": "", "fill-height": "" } },
+                        [
+                          _c(
+                            "v-flex",
+                            { attrs: { "text-xs-center": "" } },
+                            [
+                              _c(
+                                "v-jumbotron",
+                                { attrs: { height: "200px" } },
+                                [
+                                  _c("div", { staticClass: "display-3" }, [
+                                    _vm._v("Welcome to my portfolio")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "headline" }, [
+                                    _vm._v("Web Engineer")
+                                  ])
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-layout",
+                        {
+                          attrs: {
+                            row: "",
+                            wrap: "",
+                            "justify-space-between": ""
+                          }
+                        },
+                        [
+                          _c("v-flex", { attrs: { xs12: "" } }, [
+                            _c(
+                              "h3",
+                              {
+                                staticClass:
+                                  "headline teal--text text--darken-1"
+                              },
+                              [_vm._v("About")]
+                            ),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "Hi, I'm Web Engineer. I have mainly been working as PHP Engineer."
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "Now I'm working as PHP Engineer in ad technology company of Tokyo."
+                              )
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("v-flex", { attrs: { xs12: "", "mt-3": "" } }, [
+                            _c(
+                              "h3",
+                              {
+                                staticClass:
+                                  "headline teal--text text--darken-1"
+                              },
+                              [_vm._v("Skills")]
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ],
                 1
               )
             ],
             1
           )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-layout",
-        { attrs: { row: "", wra: "", "fill-height": "" } },
-        [
-          _c("v-flex", { attrs: { xs6: "", "offset-xs3": "" } }, [
-            _c("h3", { staticClass: "headline teal--text text--darken-1" }, [
-              _vm._v("About")
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("I have been working as a Web Engineer for fourth year.")
-            ])
-          ])
         ],
         1
       )
