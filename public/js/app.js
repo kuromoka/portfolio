@@ -68064,7 +68064,7 @@ module.exports = function (css) {
 var disposed = false
 var normalizeComponent = __webpack_require__(47)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(51)
 /* template */
 var __vue_template__ = __webpack_require__(48)
 /* template functional */
@@ -68322,10 +68322,10 @@ var render = function() {
                         [
                           _c("v-flex", { attrs: { xs12: "" } }, [
                             _c(
-                              "h3",
+                              "h2",
                               {
                                 staticClass:
-                                  "headline teal--text text--darken-1"
+                                  "headline indigo--text text--darken-1"
                               },
                               [_vm._v("About")]
                             ),
@@ -68338,21 +68338,55 @@ var render = function() {
                             _vm._v(" "),
                             _c("p", [
                               _vm._v(
-                                "Now I'm working as PHP Engineer in ad technology company of Tokyo."
+                                "Now I'm working as PHP Engineer in the ad technology company of Tokyo."
                               )
                             ])
                           ]),
                           _vm._v(" "),
-                          _c("v-flex", { attrs: { xs12: "", "mt-3": "" } }, [
-                            _c(
-                              "h3",
-                              {
-                                staticClass:
-                                  "headline teal--text text--darken-1"
-                              },
-                              [_vm._v("Skills")]
-                            )
-                          ])
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", "mt-3": "" } },
+                            [
+                              _c(
+                                "h2",
+                                {
+                                  staticClass:
+                                    "headline indigo--text text--darken-1"
+                                },
+                                [_vm._v("Skills")]
+                              ),
+                              _vm._v(" "),
+                              _vm._l(_vm.skills, function(skill) {
+                                return _c(
+                                  "div",
+                                  { key: skill.name },
+                                  [
+                                    _c("h3", [_vm._v(_vm._s(skill.name))]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-progress-circular",
+                                      {
+                                        attrs: {
+                                          size: "128",
+                                          color: "primary"
+                                        },
+                                        model: {
+                                          value: skill.value,
+                                          callback: function($$v) {
+                                            _vm.$set(skill, "value", $$v)
+                                          },
+                                          expression: "skill.value"
+                                        }
+                                      },
+                                      [_vm._v(_vm._s(skill.value))]
+                                    )
+                                  ],
+                                  1
+                                )
+                              })
+                            ],
+                            2
+                          )
                         ],
                         1
                       )
@@ -68387,6 +68421,69 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 50 */,
+/* 51 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      skills: [{ name: "PHP", value: "100" }, { name: "JavaScript", value: "80" }]
+    };
+  }
+});
 
 /***/ })
 /******/ ]);

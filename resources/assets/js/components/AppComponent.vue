@@ -26,12 +26,16 @@
                         </v-layout>
                         <v-layout row wrap justify-space-between>
                             <v-flex xs12>
-                                <h3 class="headline teal--text text--darken-1">About</h3>
+                                <h2 class="headline indigo--text text--darken-1">About</h2>
                                 <p>Hi, I'm Web Engineer. I have mainly been working as PHP Engineer.</p>
-                                <p>Now I'm working as PHP Engineer in ad technology company of Tokyo.</p>
+                                <p>Now I'm working as PHP Engineer in the ad technology company of Tokyo.</p>
                             </v-flex>
                             <v-flex xs12 mt-3>
-                                <h3 class="headline teal--text text--darken-1">Skills</h3>
+                                <h2 class="headline indigo--text text--darken-1">Skills</h2>
+                                <div v-for="skill in skills" :key="skill.name">
+                                    <h3>{{ skill.name }}</h3>
+                                    <v-progress-circular size="128" color="primary" v-model="skill.value">{{ skill.value }}</v-progress-circular>
+                                </div>
                             </v-flex>
                         </v-layout>
                     </v-flex>
@@ -40,3 +44,16 @@
         </v-content>
     </v-app>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        skills: [
+          { name: "PHP", value: "100" },
+          { name: "JavaScript", value: "80" },
+        ],
+      }
+    }
+  }
+</script>
