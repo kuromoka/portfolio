@@ -13,18 +13,15 @@
             </v-layout>
         </v-toolbar>
         <v-content>
+            <v-layout wrap header>
+                <v-flex xs12>
+                    a
+                </v-flex>
+            </v-layout>
             <v-container fluid>
                 <v-layout align-center>
                     <v-flex xs6 offset-xs3>
-                        <v-layout align-center fill-height>
-                            <v-flex text-xs-center>
-                                <v-jumbotron height="200px">
-                                    <div class="display-3">Welcome to my portfolio</div>
-                                    <div class="headline">Web Engineer</div>
-                                </v-jumbotron>
-                            </v-flex>
-                        </v-layout>
-                        <v-layout row wrap justify-space-between>
+                        <v-layout row wrap>
                             <v-flex xs12>
                                 <h2 class="headline indigo--text text--darken-1">About</h2>
                                 <p>Hi, I'm Web Engineer. I have mainly been working as PHP Engineer.</p>
@@ -32,10 +29,13 @@
                             </v-flex>
                             <v-flex xs12 mt-3>
                                 <h2 class="headline indigo--text text--darken-1">Skills</h2>
-                                <div v-for="skill in skills" :key="skill.name">
-                                    <h3>{{ skill.name }}</h3>
-                                    <v-progress-circular size="128" color="primary" v-model="skill.value">{{ skill.value }}</v-progress-circular>
-                                </div>
+                                I
+                                <v-layout row wrap>
+                                    <v-flex xs3 v-for="skill in skills" :key="skill.name">
+                                        <h3>{{ skill.name }}</h3>
+                                        <v-progress-circular size="128" color="primary" v-model="skill.value">{{ skill.value }}</v-progress-circular>
+                                    </v-flex>
+                                </v-layout>
                             </v-flex>
                         </v-layout>
                     </v-flex>
@@ -50,8 +50,8 @@
     data () {
       return {
         skills: [
-          { name: "PHP", value: "100" },
-          { name: "JavaScript", value: "80" },
+          { name: "PHP", value: 100 },
+          { name: "JavaScript", value: 80 },
         ],
       }
     }

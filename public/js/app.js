@@ -24833,7 +24833,7 @@ module.exports = Vue;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(49);
+module.exports = __webpack_require__(50);
 
 
 /***/ }),
@@ -68064,9 +68064,9 @@ module.exports = function (css) {
 var disposed = false
 var normalizeComponent = __webpack_require__(47)
 /* script */
-var __vue_script__ = __webpack_require__(51)
+var __vue_script__ = __webpack_require__(48)
 /* template */
-var __vue_template__ = __webpack_require__(48)
+var __vue_template__ = __webpack_require__(49)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -68215,6 +68215,68 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 /* 48 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      skills: [{ name: "PHP", value: 100 }, { name: "JavaScript", value: 80 }]
+    };
+  }
+});
+
+/***/ }),
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -68271,6 +68333,17 @@ var render = function() {
         "v-content",
         [
           _c(
+            "v-layout",
+            { attrs: { wrap: "", header: "" } },
+            [
+              _c("v-flex", { attrs: { xs12: "" } }, [
+                _vm._v("\n                a\n            ")
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
             "v-container",
             { attrs: { fluid: "" } },
             [
@@ -68284,41 +68357,7 @@ var render = function() {
                     [
                       _c(
                         "v-layout",
-                        { attrs: { "align-center": "", "fill-height": "" } },
-                        [
-                          _c(
-                            "v-flex",
-                            { attrs: { "text-xs-center": "" } },
-                            [
-                              _c(
-                                "v-jumbotron",
-                                { attrs: { height: "200px" } },
-                                [
-                                  _c("div", { staticClass: "display-3" }, [
-                                    _vm._v("Welcome to my portfolio")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "headline" }, [
-                                    _vm._v("Web Engineer")
-                                  ])
-                                ]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-layout",
-                        {
-                          attrs: {
-                            row: "",
-                            wrap: "",
-                            "justify-space-between": ""
-                          }
-                        },
+                        { attrs: { row: "", wrap: "" } },
                         [
                           _c("v-flex", { attrs: { xs12: "" } }, [
                             _c(
@@ -68355,37 +68394,43 @@ var render = function() {
                                 },
                                 [_vm._v("Skills")]
                               ),
-                              _vm._v(" "),
-                              _vm._l(_vm.skills, function(skill) {
-                                return _c(
-                                  "div",
-                                  { key: skill.name },
-                                  [
-                                    _c("h3", [_vm._v(_vm._s(skill.name))]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "v-progress-circular",
-                                      {
-                                        attrs: {
-                                          size: "128",
-                                          color: "primary"
-                                        },
-                                        model: {
-                                          value: skill.value,
-                                          callback: function($$v) {
-                                            _vm.$set(skill, "value", $$v)
+                              _vm._v(
+                                "\n                            I\n                            "
+                              ),
+                              _c(
+                                "v-layout",
+                                { attrs: { row: "", wrap: "" } },
+                                _vm._l(_vm.skills, function(skill) {
+                                  return _c(
+                                    "v-flex",
+                                    { key: skill.name, attrs: { xs3: "" } },
+                                    [
+                                      _c("h3", [_vm._v(_vm._s(skill.name))]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-progress-circular",
+                                        {
+                                          attrs: {
+                                            size: "128",
+                                            color: "primary"
                                           },
-                                          expression: "skill.value"
-                                        }
-                                      },
-                                      [_vm._v(_vm._s(skill.value))]
-                                    )
-                                  ],
-                                  1
-                                )
-                              })
+                                          model: {
+                                            value: skill.value,
+                                            callback: function($$v) {
+                                              _vm.$set(skill, "value", $$v)
+                                            },
+                                            expression: "skill.value"
+                                          }
+                                        },
+                                        [_vm._v(_vm._s(skill.value))]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                })
+                              )
                             ],
-                            2
+                            1
                           )
                         ],
                         1
@@ -68417,73 +68462,10 @@ if (false) {
 }
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 50 */,
-/* 51 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      skills: [{ name: "PHP", value: "100" }, { name: "JavaScript", value: "80" }]
-    };
-  }
-});
 
 /***/ })
 /******/ ]);
