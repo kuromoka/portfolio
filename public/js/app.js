@@ -68296,7 +68296,7 @@ var render = function() {
             [
               _c(
                 "v-flex",
-                { attrs: { xs8: "", "offset-xs2": "" } },
+                { attrs: { xs6: "", "offset-xs6": "" } },
                 [
                   _c(
                     "v-toolbar-items",
@@ -68334,10 +68334,12 @@ var render = function() {
         [
           _c(
             "v-layout",
-            { attrs: { wrap: "", header: "" } },
+            { attrs: { wrap: "", header: "", "align-center": "" } },
             [
-              _c("v-flex", { attrs: { xs12: "" } }, [
-                _vm._v("\n                a\n            ")
+              _c("v-flex", { attrs: { xs6: "", "offset-xs3": "" } }, [
+                _c("h2", { staticClass: "display-1 white--text" }, [
+                  _vm._v("My portfolio")
+                ])
               ])
             ],
             1

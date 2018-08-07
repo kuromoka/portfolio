@@ -2,7 +2,7 @@
     <v-app>
         <v-toolbar app color="primary">
             <v-layout row wrap>
-                <v-flex xs8 offset-xs2>
+                <v-flex xs6 offset-xs6>
                     <v-toolbar-items>
                         <v-btn flat dark>Top</v-btn>
                         <v-btn flat dark>About</v-btn>
@@ -13,9 +13,9 @@
             </v-layout>
         </v-toolbar>
         <v-content>
-            <v-layout wrap header>
-                <v-flex xs12>
-                    a
+            <v-layout wrap header align-center>
+                <v-flex xs6 offset-xs3>
+                    <h2 class="display-1 white--text">My portfolio</h2>
                 </v-flex>
             </v-layout>
             <v-container fluid>
