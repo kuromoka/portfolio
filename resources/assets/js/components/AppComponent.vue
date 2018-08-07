@@ -1,21 +1,26 @@
 <template>
     <v-app>
         <v-toolbar app color="primary">
-            <v-layout row wrap>
-                <v-flex xs6 offset-xs6>
-                    <v-toolbar-items>
-                        <v-btn flat dark>Top</v-btn>
-                        <v-btn flat dark>About</v-btn>
-                        <v-btn flat dark>Skills</v-btn>
-                        <v-btn flat dark>Projects</v-btn>
-                    </v-toolbar-items>
+            <v-layout align-center>
+                <v-flex xs6 offset-xs3>
+                    <v-layout row wrap justify-end>
+                        <v-flex xs12>
+                            <v-toolbar-items>
+                                <h1 class="mb-0"><a href="/"><img src="/images/logo.png" alt="kuromo works" width="234" height="60"></a></h1>
+                                <v-spacer></v-spacer>
+                                <v-btn flat dark>About</v-btn>
+                                <v-btn flat dark>Skills</v-btn>
+                                <v-btn flat dark>Projects</v-btn>
+                            </v-toolbar-items>
+                        </v-flex>
+                    </v-layout>
                 </v-flex>
             </v-layout>
         </v-toolbar>
         <v-content>
             <v-layout wrap header align-center>
                 <v-flex xs6 offset-xs3>
-                    <h2 class="display-1 white--text">My portfolio</h2>
+                    <h3 class="display-1 white--text">About me</h3>
                 </v-flex>
             </v-layout>
             <v-container fluid>

@@ -68266,6 +68266,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68292,30 +68297,55 @@ var render = function() {
         [
           _c(
             "v-layout",
-            { attrs: { row: "", wrap: "" } },
+            { attrs: { "align-center": "" } },
             [
               _c(
                 "v-flex",
-                { attrs: { xs6: "", "offset-xs6": "" } },
+                { attrs: { xs6: "", "offset-xs3": "" } },
                 [
                   _c(
-                    "v-toolbar-items",
+                    "v-layout",
+                    { attrs: { row: "", wrap: "", "justify-end": "" } },
                     [
-                      _c("v-btn", { attrs: { flat: "", dark: "" } }, [
-                        _vm._v("Top")
-                      ]),
-                      _vm._v(" "),
-                      _c("v-btn", { attrs: { flat: "", dark: "" } }, [
-                        _vm._v("About")
-                      ]),
-                      _vm._v(" "),
-                      _c("v-btn", { attrs: { flat: "", dark: "" } }, [
-                        _vm._v("Skills")
-                      ]),
-                      _vm._v(" "),
-                      _c("v-btn", { attrs: { flat: "", dark: "" } }, [
-                        _vm._v("Projects")
-                      ])
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "" } },
+                        [
+                          _c(
+                            "v-toolbar-items",
+                            [
+                              _c("h1", { staticClass: "mb-0" }, [
+                                _c("a", { attrs: { href: "/" } }, [
+                                  _c("img", {
+                                    attrs: {
+                                      src: "/images/logo.png",
+                                      alt: "kuromo works",
+                                      width: "234",
+                                      height: "60"
+                                    }
+                                  })
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-btn", { attrs: { flat: "", dark: "" } }, [
+                                _vm._v("About")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-btn", { attrs: { flat: "", dark: "" } }, [
+                                _vm._v("Skills")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-btn", { attrs: { flat: "", dark: "" } }, [
+                                _vm._v("Projects")
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
                     ],
                     1
                   )
@@ -68337,8 +68367,8 @@ var render = function() {
             { attrs: { wrap: "", header: "", "align-center": "" } },
             [
               _c("v-flex", { attrs: { xs6: "", "offset-xs3": "" } }, [
-                _c("h2", { staticClass: "display-1 white--text" }, [
-                  _vm._v("My portfolio")
+                _c("h3", { staticClass: "display-1 white--text" }, [
+                  _vm._v("About me")
                 ])
               ])
             ],
