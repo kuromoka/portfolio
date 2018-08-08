@@ -68302,6 +68302,45 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68693,6 +68732,189 @@ var render = function() {
                                   })
                                 ],
                                 2
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", "mt-5": "" } },
+                            [
+                              _c(
+                                "h2",
+                                {
+                                  staticClass:
+                                    "headline indigo--text text--darken-1"
+                                },
+                                [_vm._v("Projects")]
+                              ),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("a")]),
+                              _vm._v(" "),
+                              _c(
+                                "v-layout",
+                                {
+                                  attrs: {
+                                    wrap: "",
+                                    "justify-space-between": ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs3: "" } },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        [
+                                          _c("v-card-media", {
+                                            attrs: {
+                                              src:
+                                                "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
+                                              height: "200px"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-card-title",
+                                            { attrs: { "primary-title": "" } },
+                                            [
+                                              _c("div", [
+                                                _c(
+                                                  "h3",
+                                                  {
+                                                    staticClass: "headline mb-0"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "Kangaroo Valley Safari"
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c("div", [
+                                                  _vm._v(
+                                                    "Located two hours south of Sydney in the "
+                                                  ),
+                                                  _c("br"),
+                                                  _vm._v(
+                                                    "Southern Highlands of New South Wales, ..."
+                                                  )
+                                                ])
+                                              ])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs3: "" } },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        [
+                                          _c("v-card-media", {
+                                            attrs: {
+                                              src:
+                                                "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
+                                              height: "200px"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-card-title",
+                                            { attrs: { "primary-title": "" } },
+                                            [
+                                              _c("div", [
+                                                _c(
+                                                  "h3",
+                                                  {
+                                                    staticClass: "headline mb-0"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "Kangaroo Valley Safari"
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c("div", [
+                                                  _vm._v(
+                                                    "Located two hours south of Sydney in the "
+                                                  ),
+                                                  _c("br"),
+                                                  _vm._v(
+                                                    "Southern Highlands of New South Wales, ..."
+                                                  )
+                                                ])
+                                              ])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs3: "" } },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        [
+                                          _c("v-card-media", {
+                                            attrs: {
+                                              src:
+                                                "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
+                                              height: "200px"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-card-title",
+                                            { attrs: { "primary-title": "" } },
+                                            [
+                                              _c("div", [
+                                                _c(
+                                                  "h3",
+                                                  {
+                                                    staticClass: "headline mb-0"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "Kangaroo Valley Safari"
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c("div", [
+                                                  _vm._v(
+                                                    "Located two hours south of Sydney in the "
+                                                  ),
+                                                  _c("br"),
+                                                  _vm._v(
+                                                    "Southern Highlands of New South Wales, ..."
+                                                  )
+                                                ])
+                                              ])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
                               )
                             ],
                             1
