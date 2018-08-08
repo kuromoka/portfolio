@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->integer('language_id')->unsigned();
             $table->foreign('language_id')->references('id')->on('languages');
             $table->string('name', 50);
+            $table->string('image_name', 50);
             $table->string('description', 1024);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
