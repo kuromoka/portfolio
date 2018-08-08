@@ -45,7 +45,12 @@ p {
     z-index: -1;
   }
 
-  h2 {
+  h3 {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   }
+}
+
+.skills {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }

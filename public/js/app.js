@@ -68271,11 +68271,44 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      skills: [{ name: "PHP", value: 100 }, { name: "JavaScript", value: 80 }]
+      phpSkills: [{ name: "PHP", value: 100 }, { name: "CakePHP", value: 60 }, { name: "PHPUnit", value: 60 }, { name: "Laravel", value: 20 }],
+      jsSkills: [{ name: "JavaScript", value: 80 }, { name: "jQuery", value: 80 }, { name: "React", value: 40 }, { name: "Vue.js", value: 40 }],
+      toolSkills: [{ name: "Git", value: 100 }, { name: "GitHub", value: 80 }, { name: "Slack", value: 80 }, { name: "Docker", value: 60 }, { name: "CI Tools", value: 60 }],
+      otherSkills: [{ name: "Linux", value: 60 }, { name: "MySQL", value: 60 }, { name: "HTML", value: 60 }, { name: "CSS", value: 60 }, { name: "C#", value: 40 }]
     };
   }
 });
@@ -68409,7 +68442,7 @@ var render = function() {
                             _vm._v(" "),
                             _c("p", [
                               _vm._v(
-                                "Now I'm working as PHP Engineer in the ad technology company of Tokyo."
+                                "Now I'm working at a development job related to ad technology in Tokyo."
                               )
                             ])
                           ]),
@@ -68426,40 +68459,255 @@ var render = function() {
                                 },
                                 [_vm._v("Skills")]
                               ),
-                              _vm._v(
-                                "\n                            I\n                            "
-                              ),
+                              _vm._v(" "),
+                              _c("p", [
+                                _vm._v(
+                                  "Here is my development skill sets and those levels of understanding."
+                                )
+                              ]),
+                              _vm._v(" "),
                               _c(
                                 "v-layout",
-                                { attrs: { row: "", wrap: "" } },
-                                _vm._l(_vm.skills, function(skill) {
-                                  return _c(
+                                {
+                                  attrs: {
+                                    wrap: "",
+                                    "align-center": "",
+                                    skills: ""
+                                  }
+                                },
+                                [
+                                  _c(
                                     "v-flex",
-                                    { key: skill.name, attrs: { xs3: "" } },
+                                    { attrs: { xs2: "", "mt-3": "" } },
                                     [
-                                      _c("h3", [_vm._v(_vm._s(skill.name))]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-progress-circular",
-                                        {
-                                          attrs: {
-                                            size: "128",
-                                            color: "primary"
-                                          },
-                                          model: {
-                                            value: skill.value,
-                                            callback: function($$v) {
-                                              _vm.$set(skill, "value", $$v)
+                                      _c("h3", { staticClass: "title" }, [
+                                        _vm._v("PHP")
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.phpSkills, function(phpSkill) {
+                                    return _c(
+                                      "v-flex",
+                                      {
+                                        key: phpSkill.name,
+                                        attrs: { xs2: "", "mt-3": "" }
+                                      },
+                                      [
+                                        _c(
+                                          "h4",
+                                          { staticClass: "subheading" },
+                                          [_vm._v(_vm._s(phpSkill.name))]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-progress-circular",
+                                          {
+                                            attrs: {
+                                              size: "64",
+                                              color: "primary"
                                             },
-                                            expression: "skill.value"
-                                          }
-                                        },
-                                        [_vm._v(_vm._s(skill.value))]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                })
+                                            model: {
+                                              value: phpSkill.value,
+                                              callback: function($$v) {
+                                                _vm.$set(phpSkill, "value", $$v)
+                                              },
+                                              expression: "phpSkill.value"
+                                            }
+                                          },
+                                          [_vm._v(_vm._s(phpSkill.value))]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  })
+                                ],
+                                2
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-layout",
+                                {
+                                  attrs: {
+                                    wrap: "",
+                                    "align-center": "",
+                                    skills: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs2: "", "mt-3": "" } },
+                                    [
+                                      _c("h3", { staticClass: "title" }, [
+                                        _vm._v("JavaScript")
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.jsSkills, function(jsSkill) {
+                                    return _c(
+                                      "v-flex",
+                                      {
+                                        key: jsSkill.name,
+                                        attrs: { xs2: "", "mt-3": "" }
+                                      },
+                                      [
+                                        _c(
+                                          "h4",
+                                          { staticClass: "subheading" },
+                                          [_vm._v(_vm._s(jsSkill.name))]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-progress-circular",
+                                          {
+                                            attrs: {
+                                              size: "64",
+                                              color: "primary"
+                                            },
+                                            model: {
+                                              value: jsSkill.value,
+                                              callback: function($$v) {
+                                                _vm.$set(jsSkill, "value", $$v)
+                                              },
+                                              expression: "jsSkill.value"
+                                            }
+                                          },
+                                          [_vm._v(_vm._s(jsSkill.value))]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  })
+                                ],
+                                2
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-layout",
+                                {
+                                  attrs: {
+                                    wrap: "",
+                                    "align-center": "",
+                                    skills: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs2: "", "mt-3": "" } },
+                                    [
+                                      _c("h3", { staticClass: "title" }, [
+                                        _vm._v("Tools")
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.toolSkills, function(toolSkill) {
+                                    return _c(
+                                      "v-flex",
+                                      {
+                                        key: toolSkill.name,
+                                        attrs: { xs2: "", "mt-3": "" }
+                                      },
+                                      [
+                                        _c(
+                                          "h4",
+                                          { staticClass: "subheading" },
+                                          [_vm._v(_vm._s(toolSkill.name))]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-progress-circular",
+                                          {
+                                            attrs: {
+                                              size: "64",
+                                              color: "primary"
+                                            },
+                                            model: {
+                                              value: toolSkill.value,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  toolSkill,
+                                                  "value",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "toolSkill.value"
+                                            }
+                                          },
+                                          [_vm._v(_vm._s(toolSkill.value))]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  })
+                                ],
+                                2
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-layout",
+                                {
+                                  attrs: {
+                                    wrap: "",
+                                    "align-center": "",
+                                    skills: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs2: "", "mt-3": "" } },
+                                    [
+                                      _c("h3", { staticClass: "title" }, [
+                                        _vm._v("Others")
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.otherSkills, function(otherSkill) {
+                                    return _c(
+                                      "v-flex",
+                                      {
+                                        key: otherSkill.name,
+                                        attrs: { xs2: "", "mt-3": "" }
+                                      },
+                                      [
+                                        _c(
+                                          "h4",
+                                          { staticClass: "subheading" },
+                                          [_vm._v(_vm._s(otherSkill.name))]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-progress-circular",
+                                          {
+                                            attrs: {
+                                              size: "64",
+                                              color: "primary"
+                                            },
+                                            model: {
+                                              value: otherSkill.value,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  otherSkill,
+                                                  "value",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "otherSkill.value"
+                                            }
+                                          },
+                                          [_vm._v(_vm._s(otherSkill.value))]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  })
+                                ],
+                                2
                               )
                             ],
                             1
