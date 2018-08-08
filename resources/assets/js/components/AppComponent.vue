@@ -36,37 +36,37 @@
                                 <h2 class="headline indigo--text text--darken-1">Skills</h2>
                                 <p>Here is my development skill sets and those levels of understanding.</p>
                                 <v-layout wrap align-center skills>
-                                    <v-flex xs2 mt-3>
+                                    <v-flex xs2>
                                     <h3 class="title">PHP</h3>
                                     </v-flex>
-                                    <v-flex xs2 mt-3 v-for="phpSkill in phpSkills" :key="phpSkill.name">
+                                    <v-flex xs2 text-xs-center v-for="phpSkill in phpSkills" :key="phpSkill.name">
                                         <h4 class="subheading">{{ phpSkill.name }}</h4>
                                         <v-progress-circular size="64" color="primary" v-model="phpSkill.value">{{ phpSkill.value }}</v-progress-circular>
                                     </v-flex>
                                 </v-layout>
                                 <v-layout wrap align-center skills>
-                                    <v-flex xs2 mt-3>
+                                    <v-flex xs2 >
                                         <h3 class="title">JavaScript</h3>
                                     </v-flex>
-                                    <v-flex xs2 mt-3 v-for="jsSkill in jsSkills" :key="jsSkill.name">
+                                    <v-flex xs2 text-xs-center v-for="jsSkill in jsSkills" :key="jsSkill.name">
                                         <h4 class="subheading">{{ jsSkill.name }}</h4>
                                         <v-progress-circular size="64" color="primary" v-model="jsSkill.value">{{ jsSkill.value }}</v-progress-circular>
                                     </v-flex>
                                 </v-layout>
                                 <v-layout wrap align-center skills>
-                                    <v-flex xs2 mt-3>
+                                    <v-flex xs2>
                                         <h3 class="title">Tools</h3>
                                     </v-flex>
-                                    <v-flex xs2 mt-3 v-for="toolSkill in toolSkills" :key="toolSkill.name">
+                                    <v-flex xs2 text-xs-center v-for="toolSkill in toolSkills" :key="toolSkill.name">
                                         <h4 class="subheading">{{ toolSkill.name }}</h4>
                                         <v-progress-circular size="64" color="primary" v-model="toolSkill.value">{{ toolSkill.value }}</v-progress-circular>
                                     </v-flex>
                                 </v-layout>
                                 <v-layout wrap align-center skills>
-                                    <v-flex xs2 mt-3>
+                                    <v-flex xs2>
                                         <h3 class="title">Others</h3>
                                     </v-flex>
-                                    <v-flex xs2 mt-3 v-for="otherSkill in otherSkills" :key="otherSkill.name">
+                                    <v-flex xs2 text-xs-center v-for="otherSkill in otherSkills" :key="otherSkill.name">
                                         <h4 class="subheading">{{ otherSkill.name }}</h4>
                                         <v-progress-circular size="64" color="primary" v-model="otherSkill.value">{{ otherSkill.value }}</v-progress-circular>
                                     </v-flex>

@@ -68476,22 +68476,18 @@ var render = function() {
                                   }
                                 },
                                 [
-                                  _c(
-                                    "v-flex",
-                                    { attrs: { xs2: "", "mt-3": "" } },
-                                    [
-                                      _c("h3", { staticClass: "title" }, [
-                                        _vm._v("PHP")
-                                      ])
-                                    ]
-                                  ),
+                                  _c("v-flex", { attrs: { xs2: "" } }, [
+                                    _c("h3", { staticClass: "title" }, [
+                                      _vm._v("PHP")
+                                    ])
+                                  ]),
                                   _vm._v(" "),
                                   _vm._l(_vm.phpSkills, function(phpSkill) {
                                     return _c(
                                       "v-flex",
                                       {
                                         key: phpSkill.name,
-                                        attrs: { xs2: "", "mt-3": "" }
+                                        attrs: { xs2: "", "text-xs-center": "" }
                                       },
                                       [
                                         _c(
@@ -68535,22 +68531,18 @@ var render = function() {
                                   }
                                 },
                                 [
-                                  _c(
-                                    "v-flex",
-                                    { attrs: { xs2: "", "mt-3": "" } },
-                                    [
-                                      _c("h3", { staticClass: "title" }, [
-                                        _vm._v("JavaScript")
-                                      ])
-                                    ]
-                                  ),
+                                  _c("v-flex", { attrs: { xs2: "" } }, [
+                                    _c("h3", { staticClass: "title" }, [
+                                      _vm._v("JavaScript")
+                                    ])
+                                  ]),
                                   _vm._v(" "),
                                   _vm._l(_vm.jsSkills, function(jsSkill) {
                                     return _c(
                                       "v-flex",
                                       {
                                         key: jsSkill.name,
-                                        attrs: { xs2: "", "mt-3": "" }
+                                        attrs: { xs2: "", "text-xs-center": "" }
                                       },
                                       [
                                         _c(
@@ -68594,22 +68586,18 @@ var render = function() {
                                   }
                                 },
                                 [
-                                  _c(
-                                    "v-flex",
-                                    { attrs: { xs2: "", "mt-3": "" } },
-                                    [
-                                      _c("h3", { staticClass: "title" }, [
-                                        _vm._v("Tools")
-                                      ])
-                                    ]
-                                  ),
+                                  _c("v-flex", { attrs: { xs2: "" } }, [
+                                    _c("h3", { staticClass: "title" }, [
+                                      _vm._v("Tools")
+                                    ])
+                                  ]),
                                   _vm._v(" "),
                                   _vm._l(_vm.toolSkills, function(toolSkill) {
                                     return _c(
                                       "v-flex",
                                       {
                                         key: toolSkill.name,
-                                        attrs: { xs2: "", "mt-3": "" }
+                                        attrs: { xs2: "", "text-xs-center": "" }
                                       },
                                       [
                                         _c(
@@ -68657,22 +68645,18 @@ var render = function() {
                                   }
                                 },
                                 [
-                                  _c(
-                                    "v-flex",
-                                    { attrs: { xs2: "", "mt-3": "" } },
-                                    [
-                                      _c("h3", { staticClass: "title" }, [
-                                        _vm._v("Others")
-                                      ])
-                                    ]
-                                  ),
+                                  _c("v-flex", { attrs: { xs2: "" } }, [
+                                    _c("h3", { staticClass: "title" }, [
+                                      _vm._v("Others")
+                                    ])
+                                  ]),
                                   _vm._v(" "),
                                   _vm._l(_vm.otherSkills, function(otherSkill) {
                                     return _c(
                                       "v-flex",
                                       {
                                         key: otherSkill.name,
-                                        attrs: { xs2: "", "mt-3": "" }
+                                        attrs: { xs2: "", "text-xs-center": "" }
                                       },
                                       [
                                         _c(
