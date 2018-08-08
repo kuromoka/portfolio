@@ -15,6 +15,7 @@ import 'vuetify/dist/vuetify.min.css';
 window.Vue.use(Vuetify, {
     theme: {
         primary: colors.teal.darken1,
+        secondary: colors.indigo.darken1,
     }
 });
 

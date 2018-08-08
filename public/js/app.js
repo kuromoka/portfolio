@@ -24864,7 +24864,8 @@ window.Vue = __webpack_require__(11);
 
 window.Vue.use(__WEBPACK_IMPORTED_MODULE_0_vuetify___default.a, {
     theme: {
-        primary: __WEBPACK_IMPORTED_MODULE_1_vuetify_es5_util_colors___default.a.teal.darken1
+        primary: __WEBPACK_IMPORTED_MODULE_1_vuetify_es5_util_colors___default.a.teal.darken1,
+        secondary: __WEBPACK_IMPORTED_MODULE_1_vuetify_es5_util_colors___default.a.indigo.darken1
     }
 });
 
@@ -68556,7 +68557,7 @@ var render = function() {
                                           {
                                             attrs: {
                                               size: "64",
-                                              color: "primary"
+                                              color: "secondary"
                                             },
                                             model: {
                                               value: jsSkill.value,
@@ -68611,7 +68612,7 @@ var render = function() {
                                           {
                                             attrs: {
                                               size: "64",
-                                              color: "primary"
+                                              color: "blue darken-1"
                                             },
                                             model: {
                                               value: toolSkill.value,
@@ -68670,7 +68671,7 @@ var render = function() {
                                           {
                                             attrs: {
                                               size: "64",
-                                              color: "primary"
+                                              color: "grey darken-1"
                                             },
                                             model: {
                                               value: otherSkill.value,

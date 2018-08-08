@@ -50,7 +50,7 @@
                                     </v-flex>
                                     <v-flex xs2 text-xs-center v-for="jsSkill in jsSkills" :key="jsSkill.name">
                                         <h4 class="subheading">{{ jsSkill.name }}</h4>
-                                        <v-progress-circular size="64" color="primary" v-model="jsSkill.value">{{ jsSkill.value }}</v-progress-circular>
+                                        <v-progress-circular size="64" color="secondary" v-model="jsSkill.value">{{ jsSkill.value }}</v-progress-circular>
                                     </v-flex>
                                 </v-layout>
                                 <v-layout wrap align-center skills>
@@ -59,7 +59,7 @@
                                     </v-flex>
                                     <v-flex xs2 text-xs-center v-for="toolSkill in toolSkills" :key="toolSkill.name">
                                         <h4 class="subheading">{{ toolSkill.name }}</h4>
-                                        <v-progress-circular size="64" color="primary" v-model="toolSkill.value">{{ toolSkill.value }}</v-progress-circular>
+                                        <v-progress-circular size="64" color="blue darken-1" v-model="toolSkill.value">{{ toolSkill.value }}</v-progress-circular>
                                     </v-flex>
                                 </v-layout>
                                 <v-layout wrap align-center skills>
@@ -68,7 +68,7 @@
                                     </v-flex>
                                     <v-flex xs2 text-xs-center v-for="otherSkill in otherSkills" :key="otherSkill.name">
                                         <h4 class="subheading">{{ otherSkill.name }}</h4>
-                                        <v-progress-circular size="64" color="primary" v-model="otherSkill.value">{{ otherSkill.value }}</v-progress-circular>
+                                        <v-progress-circular size="64" color="grey darken-1" v-model="otherSkill.value">{{ otherSkill.value }}</v-progress-circular>
                                     </v-flex>
                                 </v-layout>
                             </v-flex>
