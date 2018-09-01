@@ -10,4 +10,9 @@ class Project extends Model
     {
         return $this->belongsTo('App\Language');
     }
+
+    public function project_skills()
+    {
+        return $this->hasMany('App\ProjectSkill');
+    }
 }
