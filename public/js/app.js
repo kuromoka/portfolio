@@ -68318,6 +68318,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68737,19 +68743,19 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-layout",
-                                {
-                                  attrs: {
-                                    wrap: "",
-                                    "justify-space-between": ""
-                                  }
-                                },
-                                _vm._l(_vm.projects, function(project) {
+                                { attrs: { wrap: "", "fill-height": "" } },
+                                _vm._l(_vm.projects, function(project, index) {
                                   return _c(
                                     "v-flex",
-                                    { key: project.id, attrs: { xs3: "" } },
+                                    {
+                                      key: project.id,
+                                      class: { "px-2": index === 1 },
+                                      attrs: { xs4: "", projects: "" }
+                                    },
                                     [
                                       _c(
                                         "v-card",
+                                        { attrs: { height: "450px" } },
                                         [
                                           _c("v-card-media", {
                                             attrs: {
@@ -68772,11 +68778,45 @@ var render = function() {
                                                   [_vm._v(_vm._s(project.name))]
                                                 ),
                                                 _vm._v(" "),
-                                                _c("div", [
-                                                  _vm._v(
-                                                    _vm._s(project.description)
-                                                  )
-                                                ])
+                                                _c(
+                                                  "h4",
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                                Using skills:\n                                                "
+                                                    ),
+                                                    _vm._l(
+                                                      project.project_skills,
+                                                      function(project_skill) {
+                                                        return _c(
+                                                          "span",
+                                                          {
+                                                            key:
+                                                              project_skill.id
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              "\n                                                    " +
+                                                                _vm._s(
+                                                                  project_skill.name
+                                                                ) +
+                                                                "\n                                                "
+                                                            )
+                                                          ]
+                                                        )
+                                                      }
+                                                    )
+                                                  ],
+                                                  2
+                                                ),
+                                                _vm._v(" "),
+                                                _c("p", {
+                                                  staticClass: "mt-4",
+                                                  domProps: {
+                                                    innerHTML: _vm._s(
+                                                      project.description
+                                                    )
+                                                  }
+                                                })
                                               ])
                                             ]
                                           )

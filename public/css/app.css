@@ -9484,3 +9484,17 @@ p {
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
 }
+
+.projects h4 {
+  font-size: 1.0rem;
+  font-weight: normal;
+}
+
+.projects h4 span + span::before {
+  content: "/";
+  margin: 0 1px;
+}
+
+.projects p {
+  font-size: 1.1rem;
+}

@@ -74,14 +74,20 @@
                             </v-flex>
                             <v-flex xs12 mt-5>
                                 <h2 class="headline indigo--text text--darken-1">Projects</h2>
-                                <v-layout wrap justify-space-between>
-                                    <v-flex xs3 v-for="project in projects" :key="project.id">
-                                        <v-card>
+                                <v-layout wrap fill-height>
+                                    <v-flex xs4 projects v-for="(project, index) in projects" :key="project.id" :class="{'px-2': index === 1}">
+                                        <v-card height="450px">
                                             <v-card-media src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" height="200px"></v-card-media>
                                             <v-card-title primary-title>
                                             <div>
                                                 <h3 class="headline mb-0">{{ project.name }}</h3>
-                                                <div>{{ project.description }}</div>
+                                                <h4>
+                                                    Using skills:
+                                                    <span v-for="project_skill in project.project_skills" :key="project_skill.id">
+                                                        {{ project_skill.name }}
+                                                    </span>
+                                                </h4>
+                                                <p class="mt-4" v-html="project.description"></p>
                                             </div>
                                             </v-card-title>
                                         </v-card>
