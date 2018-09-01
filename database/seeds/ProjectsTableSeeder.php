@@ -21,7 +21,7 @@ This is this portfolio site.
 EOF
 ,
                 'site_url' => '/',
-                'repository_url' => 'https://github.com/kuromoka/portfolio',
+                'github_url' => 'https://github.com/kuromoka/portfolio',
             ],
             [
                 'language_id' => '2',
@@ -32,7 +32,7 @@ This is a composer package to get cryptocurrency price from various exchange API
 EOF
 ,
                 'site_url' => 'https://packagist.org/packages/kuromoka/cyger',
-                'repository_url' => 'https://github.com/kuromoka/cyger',
+                'github_url' => 'https://github.com/kuromoka/cyger',
             ],
             [
                 'language_id' => '2',
@@ -44,7 +44,7 @@ We were kept in touch by using Slack and GitHub in English.
 EOF
 ,
                 'site_url' => 'https://youtube-clone-site.herokuapp.com/',
-                'repository_url' => 'https://github.com/chingu-voyage6/Geckos-Team-27',
+                'github_url' => 'https://github.com/chingu-voyage6/Geckos-Team-27',
             ],
         ]);
     }
