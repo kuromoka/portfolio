@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Project;
 
 class ProjectController extends Controller
 {
@@ -14,6 +14,6 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return var_dump(rand());
+        return Project::all();
     }
 }
