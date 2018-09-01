@@ -68332,7 +68332,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      phpSkills: [{ name: "PHP", value: 100 }, { name: "CakePHP", value: 60 }, { name: "PHPUnit", value: 60 }, { name: "Laravel", value: 20 }],
+      phpSkills: [{ name: "PHP", value: 100 }, { name: "CakePHP", value: 60 }, { name: "PHPUnit", value: 60 }, { name: "Composer", value: 60 }, { name: "Laravel", value: 40 }],
       jsSkills: [{ name: "JavaScript", value: 80 }, { name: "jQuery", value: 80 }, { name: "React", value: 40 }, { name: "Vue.js", value: 40 }],
       toolSkills: [{ name: "Git", value: 100 }, { name: "GitHub", value: 80 }, { name: "Slack", value: 80 }, { name: "Docker", value: 60 }, { name: "CI Tools", value: 60 }],
       otherSkills: [{ name: "Linux", value: 60 }, { name: "MySQL", value: 60 }, { name: "HTML", value: 60 }, { name: "CSS", value: 60 }, { name: "C#", value: 40 }],
@@ -68497,7 +68497,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("p", [
                                 _vm._v(
-                                  "Here is my development skill sets and those levels of understanding."
+                                  "Here is my skill sets and those levels of understanding."
                                 )
                               ]),
                               _vm._v(" "),

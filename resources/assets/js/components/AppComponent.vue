@@ -34,7 +34,7 @@
                             </v-flex>
                             <v-flex xs12 mt-3>
                                 <h2 class="headline indigo--text text--darken-1">Skills</h2>
-                                <p>Here is my development skill sets and those levels of understanding.</p>
+                                <p>Here is my skill sets and those levels of understanding.</p>
                                 <v-layout wrap align-center skills>
                                     <v-flex xs2>
                                     <h3 class="title">PHP</h3>
@@ -114,7 +114,8 @@
           { name: "PHP", value: 100 },
           { name: "CakePHP", value: 60 },
           { name: "PHPUnit", value: 60 },
-          { name: "Laravel", value: 20 },
+          { name: "Composer", value: 60 },
+          { name: "Laravel", value: 40 },
         ],
         jsSkills: [
           { name: "JavaScript", value: 80 },
