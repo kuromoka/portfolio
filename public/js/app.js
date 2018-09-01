@@ -68318,29 +68318,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68348,8 +68325,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       phpSkills: [{ name: "PHP", value: 100 }, { name: "CakePHP", value: 60 }, { name: "PHPUnit", value: 60 }, { name: "Laravel", value: 20 }],
       jsSkills: [{ name: "JavaScript", value: 80 }, { name: "jQuery", value: 80 }, { name: "React", value: 40 }, { name: "Vue.js", value: 40 }],
       toolSkills: [{ name: "Git", value: 100 }, { name: "GitHub", value: 80 }, { name: "Slack", value: 80 }, { name: "Docker", value: 60 }, { name: "CI Tools", value: 60 }],
-      otherSkills: [{ name: "Linux", value: 60 }, { name: "MySQL", value: 60 }, { name: "HTML", value: 60 }, { name: "CSS", value: 60 }, { name: "C#", value: 40 }]
+      otherSkills: [{ name: "Linux", value: 60 }, { name: "MySQL", value: 60 }, { name: "HTML", value: 60 }, { name: "CSS", value: 60 }, { name: "C#", value: 40 }],
+      projects: null
     };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('/api/projects').then(function (response) {
+      return _this.projects = response.data;
+    });
   }
 });
 
@@ -68750,8 +68735,6 @@ var render = function() {
                                 [_vm._v("Projects")]
                               ),
                               _vm._v(" "),
-                              _c("p", [_vm._v("a")]),
-                              _vm._v(" "),
                               _c(
                                 "v-layout",
                                 {
@@ -68760,10 +68743,10 @@ var render = function() {
                                     "justify-space-between": ""
                                   }
                                 },
-                                [
-                                  _c(
+                                _vm._l(_vm.projects, function(project) {
+                                  return _c(
                                     "v-flex",
-                                    { attrs: { xs3: "" } },
+                                    { key: project.id, attrs: { xs3: "" } },
                                     [
                                       _c(
                                         "v-card",
@@ -68786,122 +68769,12 @@ var render = function() {
                                                   {
                                                     staticClass: "headline mb-0"
                                                   },
-                                                  [
-                                                    _vm._v(
-                                                      "Kangaroo Valley Safari"
-                                                    )
-                                                  ]
+                                                  [_vm._v(_vm._s(project.name))]
                                                 ),
                                                 _vm._v(" "),
                                                 _c("div", [
                                                   _vm._v(
-                                                    "Located two hours south of Sydney in the "
-                                                  ),
-                                                  _c("br"),
-                                                  _vm._v(
-                                                    "Southern Highlands of New South Wales, ..."
-                                                  )
-                                                ])
-                                              ])
-                                            ]
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-flex",
-                                    { attrs: { xs3: "" } },
-                                    [
-                                      _c(
-                                        "v-card",
-                                        [
-                                          _c("v-card-media", {
-                                            attrs: {
-                                              src:
-                                                "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
-                                              height: "200px"
-                                            }
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-card-title",
-                                            { attrs: { "primary-title": "" } },
-                                            [
-                                              _c("div", [
-                                                _c(
-                                                  "h3",
-                                                  {
-                                                    staticClass: "headline mb-0"
-                                                  },
-                                                  [
-                                                    _vm._v(
-                                                      "Kangaroo Valley Safari"
-                                                    )
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("div", [
-                                                  _vm._v(
-                                                    "Located two hours south of Sydney in the "
-                                                  ),
-                                                  _c("br"),
-                                                  _vm._v(
-                                                    "Southern Highlands of New South Wales, ..."
-                                                  )
-                                                ])
-                                              ])
-                                            ]
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-flex",
-                                    { attrs: { xs3: "" } },
-                                    [
-                                      _c(
-                                        "v-card",
-                                        [
-                                          _c("v-card-media", {
-                                            attrs: {
-                                              src:
-                                                "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
-                                              height: "200px"
-                                            }
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-card-title",
-                                            { attrs: { "primary-title": "" } },
-                                            [
-                                              _c("div", [
-                                                _c(
-                                                  "h3",
-                                                  {
-                                                    staticClass: "headline mb-0"
-                                                  },
-                                                  [
-                                                    _vm._v(
-                                                      "Kangaroo Valley Safari"
-                                                    )
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("div", [
-                                                  _vm._v(
-                                                    "Located two hours south of Sydney in the "
-                                                  ),
-                                                  _c("br"),
-                                                  _vm._v(
-                                                    "Southern Highlands of New South Wales, ..."
+                                                    _vm._s(project.description)
                                                   )
                                                 ])
                                               ])
@@ -68913,8 +68786,7 @@ var render = function() {
                                     ],
                                     1
                                   )
-                                ],
-                                1
+                                })
                               )
                             ],
                             1
