@@ -68324,6 +68324,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68755,7 +68759,6 @@ var render = function() {
                                     [
                                       _c(
                                         "v-card",
-                                        { attrs: { height: "450px" } },
                                         [
                                           _c("v-card-media", {
                                             attrs: {
@@ -68769,56 +68772,99 @@ var render = function() {
                                             "v-card-title",
                                             { attrs: { "primary-title": "" } },
                                             [
-                                              _c("div", [
-                                                _c(
-                                                  "h3",
-                                                  {
-                                                    staticClass: "headline mb-0"
-                                                  },
-                                                  [_vm._v(_vm._s(project.name))]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "h4",
-                                                  [
-                                                    _vm._v(
-                                                      "\n                                                Using skills:\n                                                "
-                                                    ),
-                                                    _vm._l(
-                                                      project.project_skills,
-                                                      function(project_skill) {
-                                                        return _c(
-                                                          "span",
-                                                          {
-                                                            key:
-                                                              project_skill.id
-                                                          },
-                                                          [
-                                                            _vm._v(
-                                                              "\n                                                    " +
-                                                                _vm._s(
-                                                                  project_skill.name
-                                                                ) +
-                                                                "\n                                                "
-                                                            )
-                                                          ]
-                                                        )
-                                                      }
-                                                    )
-                                                  ],
-                                                  2
-                                                ),
-                                                _vm._v(" "),
-                                                _c("p", {
-                                                  staticClass: "mt-4",
-                                                  domProps: {
-                                                    innerHTML: _vm._s(
-                                                      project.description
-                                                    )
-                                                  }
-                                                })
-                                              ])
+                                              _c(
+                                                "div",
+                                                { staticClass: "content" },
+                                                [
+                                                  _c(
+                                                    "h3",
+                                                    {
+                                                      staticClass:
+                                                        "headline mb-0"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(project.name)
+                                                      )
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "h4",
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                Using skills:\n                                                "
+                                                      ),
+                                                      _vm._l(
+                                                        project.project_skills,
+                                                        function(
+                                                          project_skill
+                                                        ) {
+                                                          return _c(
+                                                            "span",
+                                                            {
+                                                              key:
+                                                                project_skill.id
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                                    " +
+                                                                  _vm._s(
+                                                                    project_skill.name
+                                                                  ) +
+                                                                  "\n                                                "
+                                                              )
+                                                            ]
+                                                          )
+                                                        }
+                                                      )
+                                                    ],
+                                                    2
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c("p", {
+                                                    staticClass: "mt-4",
+                                                    domProps: {
+                                                      innerHTML: _vm._s(
+                                                        project.description
+                                                      )
+                                                    }
+                                                  })
+                                                ]
+                                              )
                                             ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-card-actions",
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    flat: "",
+                                                    color: "secondary",
+                                                    href: project.site_url,
+                                                    target: "_blank"
+                                                  }
+                                                },
+                                                [_vm._v("Site")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    flat: "",
+                                                    color: "secondary",
+                                                    href: project.github_url,
+                                                    target: "_blank"
+                                                  }
+                                                },
+                                                [_vm._v("GitHub")]
+                                              )
+                                            ],
+                                            1
                                           )
                                         ],
                                         1

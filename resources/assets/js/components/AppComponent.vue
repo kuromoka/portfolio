@@ -76,10 +76,10 @@
                                 <h2 class="headline indigo--text text--darken-1">Projects</h2>
                                 <v-layout wrap fill-height>
                                     <v-flex xs4 projects v-for="(project, index) in projects" :key="project.id" :class="{'px-2': index === 1}">
-                                        <v-card height="450px">
+                                        <v-card>
                                             <v-card-media src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" height="200px"></v-card-media>
                                             <v-card-title primary-title>
-                                            <div>
+                                            <div class="content">
                                                 <h3 class="headline mb-0">{{ project.name }}</h3>
                                                 <h4>
                                                     Using skills:
@@ -90,6 +90,10 @@
                                                 <p class="mt-4" v-html="project.description"></p>
                                             </div>
                                             </v-card-title>
+                                            <v-card-actions>
+                                                <v-btn flat color="secondary" :href="project.site_url" target="_blank">Site</v-btn>
+                                                <v-btn flat color="secondary" :href="project.github_url" target="_blank">GitHub</v-btn>
+                                            </v-card-actions>
                                         </v-card>
                                     </v-flex>
                                 </v-layout>

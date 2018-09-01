@@ -9485,16 +9485,20 @@ p {
   padding: 10px 0;
 }
 
-.projects h4 {
+.projects .content {
+  height: 200px;
+}
+
+.projects .content h4 {
   font-size: 1.0rem;
   font-weight: normal;
 }
 
-.projects h4 span + span::before {
+.projects .content h4 span + span::before {
   content: "/";
   margin: 0 1px;
 }
 
-.projects p {
+.projects .content p {
   font-size: 1.1rem;
 }

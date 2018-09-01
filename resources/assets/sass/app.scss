@@ -56,17 +56,21 @@ p {
 }
 
 .projects {
-  h4 {
-    font-size: 1.0rem;
-    font-weight: normal;
+  .content {
+    height: 200px;
 
-    span + span::before {
-      content: "/";
-      margin: 0 1px;
+    h4 {
+      font-size: 1.0rem;
+      font-weight: normal;
+  
+      span + span::before {
+        content: "/";
+        margin: 0 1px;
+      }
     }
-  }
-
-  p {
-    font-size: 1.1rem;
+  
+    p {
+      font-size: 1.1rem;
+    }
   }
 }
