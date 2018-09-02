@@ -80,26 +80,24 @@ p {
       }
     }
   }
-}
 
-.accounts {
-  .github {
-    i {
-      color: #000;
+  .contact {
+    .github {
+      i {
+        color: #000;
+      }
     }
-  }
-
-  .twitter {
-    margin-left: 5px;
-
-    i {
-      color: #55acee;
+  
+    .twitter {
+      margin-left: 5px;
+  
+      i {
+        color: #55acee;
+      }
     }
-  }
-}
 
-.contact {
-  form {
-    text-align: center;
+    form {
+      text-align: center;
+    }
   }
 }

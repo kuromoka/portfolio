@@ -8,10 +8,10 @@
                             <v-toolbar-items>
                                 <h1 class="mb-0"><a href="/"><img src="/images/logo.png" alt="kuromo works" width="234" height="60"></a></h1>
                                 <v-spacer></v-spacer>
-                                <v-btn flat dark>About</v-btn>
-                                <v-btn flat dark>Skills</v-btn>
-                                <v-btn flat dark>Projects</v-btn>
-                                <v-btn flat dark>Contact</v-btn>
+                                <v-btn flat dark @click="$vuetify.goTo('.about', {offset: -80})">About</v-btn>
+                                <v-btn flat dark @click="$vuetify.goTo('.skills', {offset: -80})">Skills</v-btn>
+                                <v-btn flat dark @click="$vuetify.goTo('.projects', {offset: -80})">Projects</v-btn>
+                                <v-btn flat dark @click="$vuetify.goTo('.contact', {offset: -80})">Contact</v-btn>
                             </v-toolbar-items>
                         </v-flex>
                     </v-layout>
@@ -103,10 +103,8 @@
                                 <h2 class="headline indigo--text text--darken-1">Contact</h2>
                                 <p>If you have any questions, please feel free to contact me via ways below.</p>
                                 <h3 class="title">GitHub / Twitter</h3>
-                                <div class="accounts">
-                                    <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
-                                    <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
-                                </div>
+                                <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
+                                <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
                                 <h3 class="title mt-3">Contact Form</h3>
                                 <v-form ref="form" v-model="valid" lazy-validation>
                                     <v-text-field

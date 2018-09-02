@@ -9508,18 +9508,18 @@ p {
   font-size: 1.1rem;
 }
 
-.accounts .github i {
+.v-content .contact .github i {
   color: #000;
 }
 
-.accounts .twitter {
+.v-content .contact .twitter {
   margin-left: 5px;
 }
 
-.accounts .twitter i {
+.v-content .contact .twitter i {
   color: #55acee;
 }
 
-.contact form {
+.v-content .contact form {
   text-align: center;
 }

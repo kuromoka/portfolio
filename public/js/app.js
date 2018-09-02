@@ -68526,8 +68526,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68597,21 +68595,65 @@ var render = function() {
                               _vm._v(" "),
                               _c("v-spacer"),
                               _vm._v(" "),
-                              _c("v-btn", { attrs: { flat: "", dark: "" } }, [
-                                _vm._v("About")
-                              ]),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", dark: "" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.$vuetify.goTo(".about", {
+                                        offset: -80
+                                      })
+                                    }
+                                  }
+                                },
+                                [_vm._v("About")]
+                              ),
                               _vm._v(" "),
-                              _c("v-btn", { attrs: { flat: "", dark: "" } }, [
-                                _vm._v("Skills")
-                              ]),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", dark: "" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.$vuetify.goTo(".skills", {
+                                        offset: -80
+                                      })
+                                    }
+                                  }
+                                },
+                                [_vm._v("Skills")]
+                              ),
                               _vm._v(" "),
-                              _c("v-btn", { attrs: { flat: "", dark: "" } }, [
-                                _vm._v("Projects")
-                              ]),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", dark: "" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.$vuetify.goTo(".projects", {
+                                        offset: -80
+                                      })
+                                    }
+                                  }
+                                },
+                                [_vm._v("Projects")]
+                              ),
                               _vm._v(" "),
-                              _c("v-btn", { attrs: { flat: "", dark: "" } }, [
-                                _vm._v("Contact")
-                              ])
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", dark: "" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.$vuetify.goTo(".contact", {
+                                        offset: -80
+                                      })
+                                    }
+                                  }
+                                },
+                                [_vm._v("Contact")]
+                              )
                             ],
                             1
                           )
@@ -69081,41 +69123,39 @@ var render = function() {
                                 _vm._v("GitHub / Twitter")
                               ]),
                               _vm._v(" "),
-                              _c("div", { staticClass: "accounts" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "github",
-                                    attrs: {
-                                      href: "https://github.com/kuromoka",
-                                      target: "_blank"
-                                    }
-                                  },
-                                  [
-                                    _c("v-icon", { attrs: { large: "" } }, [
-                                      _vm._v("fab fa-github-square")
-                                    ])
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "twitter",
-                                    attrs: {
-                                      href: "https://twitter.com/kuromoka16",
-                                      target: "_blank"
-                                    }
-                                  },
-                                  [
-                                    _c("v-icon", { attrs: { large: "" } }, [
-                                      _vm._v("fab fa-twitter-square")
-                                    ])
-                                  ],
-                                  1
-                                )
-                              ]),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "github",
+                                  attrs: {
+                                    href: "https://github.com/kuromoka",
+                                    target: "_blank"
+                                  }
+                                },
+                                [
+                                  _c("v-icon", { attrs: { large: "" } }, [
+                                    _vm._v("fab fa-github-square")
+                                  ])
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "twitter",
+                                  attrs: {
+                                    href: "https://twitter.com/kuromoka16",
+                                    target: "_blank"
+                                  }
+                                },
+                                [
+                                  _c("v-icon", { attrs: { large: "" } }, [
+                                    _vm._v("fab fa-twitter-square")
+                                  ])
+                                ],
+                                1
+                              ),
                               _vm._v(" "),
                               _c("h3", { staticClass: "title mt-3" }, [
                                 _vm._v("Contact Form")
