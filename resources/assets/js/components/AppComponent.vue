@@ -1,17 +1,26 @@
 <template>
     <v-app>
+        <v-navigation-drawer fixed app disable-resize-watcher v-model="drawer">
+            <v-list dense class="pt-0">
+                <v-list-tile v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
+                    <v-list-tile-content>
+                        <v-list-tile-title>{{ menu.name }}</v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+            </v-list>
+        </v-navigation-drawer>
         <v-toolbar app color="primary">
+            <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
             <v-layout align-center>
                 <v-flex xs6 offset-xs3>
                     <v-layout row wrap justify-end>
                         <v-flex xs12>
-                            <v-toolbar-items>
+                            <v-toolbar-items class="hidden-sm-and-down">
                                 <h1 class="mb-0"><a href="/"><img src="/images/logo.png" alt="kuromo works" width="234" height="60"></a></h1>
                                 <v-spacer></v-spacer>
-                                <v-btn flat dark @click="$vuetify.goTo('.about', {offset: -80})">About</v-btn>
-                                <v-btn flat dark @click="$vuetify.goTo('.skills', {offset: -80})">Skills</v-btn>
-                                <v-btn flat dark @click="$vuetify.goTo('.projects', {offset: -80})">Projects</v-btn>
-                                <v-btn flat dark @click="$vuetify.goTo('.contact', {offset: -80})">Contact</v-btn>
+                                <v-btn flat dark v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
+                                    {{ menu.name }}
+                                </v-btn>
                             </v-toolbar-items>
                         </v-flex>
                     </v-layout>
@@ -146,6 +155,14 @@
   export default {
     data () {
       return {
+        drawer: null,
+        menus: [
+          { name: "About", target: ".about", offset: -80 },
+          { name: "Skills", target: ".skills", offset: -80 },
+          { name: "Projects", target: ".projects", offset: -80 },
+          { name: "Contact", target: ".contact", offset: -80 },
+          { name: "Top", target: "#app", offset: 0 },
+        ],
         phpSkills: [
           { name: "PHP", value: 100 },
           { name: "CakePHP", value: 60 },

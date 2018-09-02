@@ -68526,10 +68526,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      drawer: null,
+      menus: [{ name: "About", target: ".about", offset: -80 }, { name: "Skills", target: ".skills", offset: -80 }, { name: "Projects", target: ".projects", offset: -80 }, { name: "Contact", target: ".contact", offset: -80 }, { name: "Top", target: "#app", offset: 0 }],
       phpSkills: [{ name: "PHP", value: 100 }, { name: "CakePHP", value: 60 }, { name: "PHPUnit", value: 60 }, { name: "Composer", value: 60 }, { name: "Laravel", value: 40 }],
       jsSkills: [{ name: "JavaScript", value: 80 }, { name: "jQuery", value: 80 }, { name: "React", value: 40 }, { name: "Vue.js", value: 40 }],
       toolSkills: [{ name: "Git", value: 100 }, { name: "GitHub", value: 80 }, { name: "Slack", value: 80 }, { name: "Docker", value: 60 }, { name: "CI Tools", value: 60 }],
@@ -68558,9 +68569,61 @@ var render = function() {
     "v-app",
     [
       _c(
+        "v-navigation-drawer",
+        {
+          attrs: { fixed: "", app: "", "disable-resize-watcher": "" },
+          model: {
+            value: _vm.drawer,
+            callback: function($$v) {
+              _vm.drawer = $$v
+            },
+            expression: "drawer"
+          }
+        },
+        [
+          _c(
+            "v-list",
+            { staticClass: "pt-0", attrs: { dense: "" } },
+            _vm._l(_vm.menus, function(menu) {
+              return _c(
+                "v-list-tile",
+                {
+                  key: menu.name,
+                  on: {
+                    click: function($event) {
+                      _vm.$vuetify.goTo(menu.target, { offset: menu.offset })
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "v-list-tile-content",
+                    [_c("v-list-tile-title", [_vm._v(_vm._s(menu.name))])],
+                    1
+                  )
+                ],
+                1
+              )
+            })
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
         "v-toolbar",
         { attrs: { app: "", color: "primary" } },
         [
+          _c("v-toolbar-side-icon", {
+            staticClass: "hidden-md-and-up",
+            on: {
+              click: function($event) {
+                $event.stopPropagation()
+                _vm.drawer = !_vm.drawer
+              }
+            }
+          }),
+          _vm._v(" "),
           _c(
             "v-layout",
             { attrs: { "align-center": "" } },
@@ -68579,6 +68642,7 @@ var render = function() {
                         [
                           _c(
                             "v-toolbar-items",
+                            { staticClass: "hidden-sm-and-down" },
                             [
                               _c("h1", { staticClass: "mb-0" }, [
                                 _c("a", { attrs: { href: "/" } }, [
@@ -68595,67 +68659,31 @@ var render = function() {
                               _vm._v(" "),
                               _c("v-spacer"),
                               _vm._v(" "),
-                              _c(
-                                "v-btn",
-                                {
-                                  attrs: { flat: "", dark: "" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.$vuetify.goTo(".about", {
-                                        offset: -80
-                                      })
+                              _vm._l(_vm.menus, function(menu) {
+                                return _c(
+                                  "v-btn",
+                                  {
+                                    key: menu.name,
+                                    attrs: { flat: "", dark: "" },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.$vuetify.goTo(menu.target, {
+                                          offset: menu.offset
+                                        })
+                                      }
                                     }
-                                  }
-                                },
-                                [_vm._v("About")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-btn",
-                                {
-                                  attrs: { flat: "", dark: "" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.$vuetify.goTo(".skills", {
-                                        offset: -80
-                                      })
-                                    }
-                                  }
-                                },
-                                [_vm._v("Skills")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-btn",
-                                {
-                                  attrs: { flat: "", dark: "" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.$vuetify.goTo(".projects", {
-                                        offset: -80
-                                      })
-                                    }
-                                  }
-                                },
-                                [_vm._v("Projects")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-btn",
-                                {
-                                  attrs: { flat: "", dark: "" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.$vuetify.goTo(".contact", {
-                                        offset: -80
-                                      })
-                                    }
-                                  }
-                                },
-                                [_vm._v("Contact")]
-                              )
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                " +
+                                        _vm._s(menu.name) +
+                                        "\n                            "
+                                    )
+                                  ]
+                                )
+                              })
                             ],
-                            1
+                            2
                           )
                         ],
                         1
