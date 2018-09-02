@@ -68521,6 +68521,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68628,25 +68635,25 @@ var render = function() {
         "v-content",
         [
           _c(
-            "v-layout",
-            { attrs: { wrap: "", header: "", "align-center": "" } },
-            [
-              _c("v-flex", { attrs: { xs6: "", "offset-xs3": "" } }, [
-                _c("h3", { staticClass: "display-1 white--text" }, [
-                  _vm._v("About me")
-                ])
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
             "v-container",
-            { attrs: { fluid: "", "fill-height": "" } },
+            { attrs: { fluid: "", "pa-0": "" } },
             [
               _c(
                 "v-layout",
-                { attrs: { "align-center": "" } },
+                { attrs: { "align-center": "", header: "" } },
+                [
+                  _c("v-flex", { attrs: { xs6: "", "offset-xs3": "" } }, [
+                    _c("h3", { staticClass: "display-1 white--text" }, [
+                      _vm._v("About me")
+                    ])
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                { attrs: { "align-center": "", "mt-4": "" } },
                 [
                   _c(
                     "v-flex",
@@ -68654,9 +68661,9 @@ var render = function() {
                     [
                       _c(
                         "v-layout",
-                        { attrs: { row: "", wrap: "" } },
+                        { attrs: { wrap: "" } },
                         [
-                          _c("v-flex", { attrs: { xs12: "" } }, [
+                          _c("v-flex", { attrs: { xs12: "", about: "" } }, [
                             _c(
                               "h2",
                               {
@@ -68681,7 +68688,7 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "v-flex",
-                            { attrs: { xs12: "", "mt-3": "" } },
+                            { attrs: { xs12: "", skills: "" } },
                             [
                               _c(
                                 "h2",
@@ -68700,13 +68707,7 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-layout",
-                                {
-                                  attrs: {
-                                    wrap: "",
-                                    "align-center": "",
-                                    skills: ""
-                                  }
-                                },
+                                { attrs: { wrap: "", "align-center": "" } },
                                 [
                                   _c("v-flex", { attrs: { xs2: "" } }, [
                                     _c("h3", { staticClass: "title" }, [
@@ -68755,13 +68756,7 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-layout",
-                                {
-                                  attrs: {
-                                    wrap: "",
-                                    "align-center": "",
-                                    skills: ""
-                                  }
-                                },
+                                { attrs: { wrap: "", "align-center": "" } },
                                 [
                                   _c("v-flex", { attrs: { xs2: "" } }, [
                                     _c("h3", { staticClass: "title" }, [
@@ -68810,13 +68805,7 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-layout",
-                                {
-                                  attrs: {
-                                    wrap: "",
-                                    "align-center": "",
-                                    skills: ""
-                                  }
-                                },
+                                { attrs: { wrap: "", "align-center": "" } },
                                 [
                                   _c("v-flex", { attrs: { xs2: "" } }, [
                                     _c("h3", { staticClass: "title" }, [
@@ -68869,13 +68858,7 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-layout",
-                                {
-                                  attrs: {
-                                    wrap: "",
-                                    "align-center": "",
-                                    skills: ""
-                                  }
-                                },
+                                { attrs: { wrap: "", "align-center": "" } },
                                 [
                                   _c("v-flex", { attrs: { xs2: "" } }, [
                                     _c("h3", { staticClass: "title" }, [
@@ -68931,7 +68914,7 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "v-flex",
-                            { attrs: { xs12: "", "mt-5": "" } },
+                            { attrs: { xs12: "", "mt-4": "", projects: "" } },
                             [
                               _c(
                                 "h2",
@@ -68951,7 +68934,7 @@ var render = function() {
                                     {
                                       key: project.id,
                                       class: { "px-2": index === 1 },
-                                      attrs: { xs4: "", projects: "" }
+                                      attrs: { xs4: "" }
                                     },
                                     [
                                       _c(
@@ -69077,7 +69060,7 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "v-flex",
-                            { attrs: { xs12: "", "mt-5": "", contact: "" } },
+                            { attrs: { xs12: "", "mt-4": "", contact: "" } },
                             [
                               _c(
                                 "h2",
@@ -69095,7 +69078,7 @@ var render = function() {
                               ]),
                               _vm._v(" "),
                               _c("h3", { staticClass: "title" }, [
-                                _vm._v("Accounts")
+                                _vm._v("GitHub / Twitter")
                               ]),
                               _vm._v(" "),
                               _c("div", { staticClass: "accounts" }, [
@@ -69135,7 +69118,7 @@ var render = function() {
                               ]),
                               _vm._v(" "),
                               _c("h3", { staticClass: "title mt-3" }, [
-                                _vm._v("Form")
+                                _vm._v("Contact Form")
                               ]),
                               _vm._v(" "),
                               _c(
@@ -69213,6 +69196,24 @@ var render = function() {
                 ],
                 1
               )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-footer",
+        { attrs: { app: "", absolute: "", color: "primary" } },
+        [
+          _c(
+            "v-layout",
+            { attrs: { "text-xs-center": "" } },
+            [
+              _c("v-flex", { attrs: { xs12: "", "white--text": "" } }, [
+                _c("strong", [_vm._v("© 2018 kuromoka")])
+              ])
             ],
             1
           )

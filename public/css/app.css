@@ -9454,16 +9454,21 @@ p {
   text-transform: none !important;
 }
 
-.header {
+.v-content {
+  margin-bottom: 24px;
+}
+
+.v-content .header {
   background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30%;
+  width: 100%;
+  height: 250px;
   position: relative;
   z-index: 0;
 }
 
-.header::before {
+.v-content .header::before {
   content: '';
   -webkit-filter: blur(5px);
           filter: blur(5px);
@@ -9476,30 +9481,30 @@ p {
   z-index: -1;
 }
 
-.header h3 {
+.v-content .header h3 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.skills {
+.v-content .skills .layout {
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
 }
 
-.projects .content {
+.v-content .projects .content {
   height: 200px;
 }
 
-.projects .content h4 {
+.v-content .projects .content h4 {
   font-size: 1.0rem;
   font-weight: normal;
 }
 
-.projects .content h4 span + span::before {
+.v-content .projects .content h4 span + span::before {
   content: "/";
   margin: 0 1px;
 }
 
-.projects .content p {
+.v-content .projects .content p {
   font-size: 1.1rem;
 }
 
