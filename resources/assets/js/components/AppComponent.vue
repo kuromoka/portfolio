@@ -46,40 +46,13 @@
                             <v-flex xs12 skills>
                                 <h2 class="headline indigo--text text--darken-1">Skills</h2>
                                 <p>Here is my skill sets and those levels of understanding.</p>
-                                <v-layout wrap align-center>
+                                <v-layout wrap align-center v-for="skill in skills" :key="skill.name">
                                     <v-flex xs2>
-                                    <h3 class="title">PHP</h3>
+                                    <h3 class="title">{{ skill.name }}</h3>
                                     </v-flex>
-                                    <v-flex xs2 text-xs-center v-for="phpSkill in phpSkills" :key="phpSkill.name">
-                                        <h4 class="subheading">{{ phpSkill.name }}</h4>
-                                        <v-progress-circular size="64" color="primary" v-model="phpSkill.value">{{ phpSkill.value }}</v-progress-circular>
-                                    </v-flex>
-                                </v-layout>
-                                <v-layout wrap align-center>
-                                    <v-flex xs2 >
-                                        <h3 class="title">JavaScript</h3>
-                                    </v-flex>
-                                    <v-flex xs2 text-xs-center v-for="jsSkill in jsSkills" :key="jsSkill.name">
-                                        <h4 class="subheading">{{ jsSkill.name }}</h4>
-                                        <v-progress-circular size="64" color="secondary" v-model="jsSkill.value">{{ jsSkill.value }}</v-progress-circular>
-                                    </v-flex>
-                                </v-layout>
-                                <v-layout wrap align-center>
-                                    <v-flex xs2>
-                                        <h3 class="title">Tools</h3>
-                                    </v-flex>
-                                    <v-flex xs2 text-xs-center v-for="toolSkill in toolSkills" :key="toolSkill.name">
-                                        <h4 class="subheading">{{ toolSkill.name }}</h4>
-                                        <v-progress-circular size="64" color="blue darken-1" v-model="toolSkill.value">{{ toolSkill.value }}</v-progress-circular>
-                                    </v-flex>
-                                </v-layout>
-                                <v-layout wrap align-center>
-                                    <v-flex xs2>
-                                        <h3 class="title">Others</h3>
-                                    </v-flex>
-                                    <v-flex xs2 text-xs-center v-for="otherSkill in otherSkills" :key="otherSkill.name">
-                                        <h4 class="subheading">{{ otherSkill.name }}</h4>
-                                        <v-progress-circular size="64" color="grey darken-1" v-model="otherSkill.value">{{ otherSkill.value }}</v-progress-circular>
+                                    <v-flex xs2 text-xs-center v-for="detail in skill.details" :key="detail.name">
+                                        <h4 class="subheading">{{ detail.name }}</h4>
+                                        <v-progress-circular size="64" :color="skill.color" v-model="detail.value">{{ detail.value }}</v-progress-circular>
                                     </v-flex>
                                 </v-layout>
                             </v-flex>
@@ -172,32 +145,50 @@
           { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -80 },
           { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -80 },
         ],
-        phpSkills: [
-          { name: "PHP", value: 100 },
-          { name: "CakePHP", value: 60 },
-          { name: "PHPUnit", value: 60 },
-          { name: "Composer", value: 60 },
-          { name: "Laravel", value: 40 },
-        ],
-        jsSkills: [
-          { name: "JavaScript", value: 80 },
-          { name: "jQuery", value: 80 },
-          { name: "React", value: 40 },
-          { name: "Vue.js", value: 40 },
-        ],
-        toolSkills: [
-          { name: "Git", value: 100 },
-          { name: "GitHub", value: 80 },
-          { name: "Slack", value: 80 },
-          { name: "Docker", value: 60 },
-          { name: "CI Tools", value: 60 },
-        ],
-        otherSkills: [
-          { name: "Linux", value: 60 },
-          { name: "MySQL", value: 60 },
-          { name: "HTML", value: 60 },
-          { name: "CSS", value: 60 },
-          { name: "C#", value: 40 },
+        skills: [
+          {
+            name: "PHP",
+            color: "primary",
+            details: [
+              { name: "PHP", value: 100 },
+              { name: "CakePHP", value: 60 },
+              { name: "PHPUnit", value: 60 },
+              { name: "Composer", value: 60 },
+              { name: "Laravel", value: 40 },
+            ],
+          },
+          {
+            name: "JavaScript",
+            color: "secondary",
+            details: [
+              { name: "JavaScript", value: 80 },
+              { name: "jQuery", value: 80 },
+              { name: "React", value: 40 },
+              { name: "Vue.js", value: 40 },
+            ],
+          },
+          {
+            name: "Tools",
+            color: "blue darken-1",
+            details: [
+              { name: "Git", value: 100 },
+              { name: "GitHub", value: 80 },
+              { name: "Slack", value: 80 },
+              { name: "Docker", value: 60 },
+              { name: "CI Tools", value: 60 },
+            ],
+          },
+          {
+            name: "Others",
+            color: "grey darken-1",
+            details: [
+              { name: "Linux", value: 60 },
+              { name: "MySQL", value: 60 },
+              { name: "HTML", value: 60 },
+              { name: "CSS", value: 60 },
+              { name: "C#", value: 40 },
+            ],
+          },
         ],
         projects: null,
       }
