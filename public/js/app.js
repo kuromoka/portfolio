@@ -68535,12 +68535,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       drawer: null,
-      menus: [{ name: "About", target: ".about", offset: -80 }, { name: "Skills", target: ".skills", offset: -80 }, { name: "Projects", target: ".projects", offset: -80 }, { name: "Contact", target: ".contact", offset: -80 }, { name: "Top", target: "#app", offset: 0 }],
+      menus: [{ name: "About", target: ".about", offset: -80 }, { name: "Skills", target: ".skills", offset: -80 }, { name: "Projects", target: ".projects", offset: -80 }, { name: "Contact", target: ".contact", offset: -80 }],
       phpSkills: [{ name: "PHP", value: 100 }, { name: "CakePHP", value: 60 }, { name: "PHPUnit", value: 60 }, { name: "Composer", value: 60 }, { name: "Laravel", value: 40 }],
       jsSkills: [{ name: "JavaScript", value: 80 }, { name: "jQuery", value: 80 }, { name: "React", value: 40 }, { name: "Vue.js", value: 40 }],
       toolSkills: [{ name: "Git", value: 100 }, { name: "GitHub", value: 80 }, { name: "Slack", value: 80 }, { name: "Docker", value: 60 }, { name: "CI Tools", value: 60 }],
@@ -69254,6 +69261,41 @@ var render = function() {
                               )
                             ],
                             1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                { attrs: { "justify-end": "" } },
+                [
+                  _c(
+                    "v-flex",
+                    { attrs: { xs1: "" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { flat: "", color: "secondary" },
+                          on: {
+                            click: function($event) {
+                              _vm.$vuetify.goTo("#app", { offset: 0 })
+                            }
+                          }
+                        },
+                        [
+                          _vm._v("\n                        Top "),
+                          _c(
+                            "v-icon",
+                            { staticClass: "ml-2", attrs: { medium: "" } },
+                            [_vm._v("fas fa-arrow-circle-up")]
                           )
                         ],
                         1

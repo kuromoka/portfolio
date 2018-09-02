@@ -139,6 +139,13 @@
                         </v-layout>
                     </v-flex>
                 </v-layout>
+                <v-layout justify-end>
+                    <v-flex xs1>
+                        <v-btn flat color="secondary" @click="$vuetify.goTo('#app', {offset: 0})">
+                            Top <v-icon medium class="ml-2">fas fa-arrow-circle-up</v-icon>
+                        </v-btn>
+                    </v-flex>
+                </v-layout>
             </v-container>
         </v-content>
         <v-footer app absolute color="primary">
@@ -161,7 +168,6 @@
           { name: "Skills", target: ".skills", offset: -80 },
           { name: "Projects", target: ".projects", offset: -80 },
           { name: "Contact", target: ".contact", offset: -80 },
-          { name: "Top", target: "#app", offset: 0 },
         ],
         phpSkills: [
           { name: "PHP", value: 100 },
