@@ -68,6 +68,16 @@ p {
   }
 
   .projects {
+    .center-px {
+      padding: 0 8px;
+    }
+
+    @media screen and (max-width: 959px) {
+      .center-px {
+        padding: 0;
+      }
+    }
+
     .content {
       height: 200px;
 

@@ -9494,6 +9494,16 @@ p {
   padding: 10px 0;
 }
 
+.v-content .projects .center-px {
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 959px) {
+  .v-content .projects .center-px {
+    padding: 0;
+  }
+}
+
 .v-content .projects .content {
   height: 200px;
 }

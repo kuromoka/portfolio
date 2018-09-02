@@ -47,15 +47,12 @@
                                 <h2 class="headline indigo--text text--darken-1">Skills</h2>
                                 <p>Here is my skill sets and those levels of understanding.</p>
                                 <v-layout wrap align-center v-for="skill in skills" :key="skill.name">
-                                    <v-flex md2 hidden-sm-and-down>
+                                    <v-flex xs12 md2>
                                         <h3 class="title">{{ skill.name }}</h3>
                                     </v-flex>
                                     <v-flex md2 hidden-sm-and-down text-xs-center v-for="detail in skill.details" :key="detail.name">
                                         <h4 class="subheading">{{ detail.name }}</h4>
                                         <v-progress-circular size="64" :color="skill.color" v-model="detail.value">{{ detail.value }}</v-progress-circular>
-                                    </v-flex>
-                                    <v-flex xs12 hidden-md-and-up>
-                                        <h3 class="title">{{ skill.name }}</h3>
                                     </v-flex>
                                     <v-flex xs4 hidden-md-and-up text-xs-center v-for="detail in skill.details" :key="detail.name">
                                         <h4 class="subheading">{{ detail.name }}</h4>
@@ -65,23 +62,23 @@
                             </v-flex>
                             <v-flex xs12 mt-4 projects>
                                 <h2 class="headline indigo--text text--darken-1">Projects</h2>
-                                <v-layout wrap fill-height>
-                                    <v-flex xs4 v-for="(project, index) in projects" :key="project.id" :class="{'px-2': index === 1}">
+                                <v-layout wrap>
+                                    <v-flex xs12 md4 v-for="(project, index) in projects" :key="project.id" :class="{'center-px': index === 1}">
                                         <v-card>
                                             <v-card-media src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" height="200px"></v-card-media>
                                             <v-card-title primary-title>
-                                            <div class="content">
-                                                <h3 class="headline mb-0">{{ project.name }}</h3>
-                                                <h4>
-                                                    Using skills:
-                                                    <span v-for="project_skill in project.project_skills" :key="project_skill.id">
-                                                        {{ project_skill.name }}
-                                                    </span>
-                                                </h4>
-                                                <p class="mt-4" v-html="project.description"></p>
-                                            </div>
+                                                <div class="content">
+                                                    <h3 class="headline mb-0">{{ project.name }}</h3>
+                                                    <h4>
+                                                        Using skills:
+                                                        <span v-for="project_skill in project.project_skills" :key="project_skill.id">
+                                                            {{ project_skill.name }}
+                                                        </span>
+                                                    </h4>
+                                                    <p class="mt-4" v-html="project.description"></p>
+                                                </div>
                                             </v-card-title>
-                                            <v-card-actions>
+                                            <v-card-actions class="pa-0">
                                                 <v-btn flat color="secondary" :href="project.site_url" target="_blank">Site</v-btn>
                                                 <v-btn flat color="secondary" :href="project.github_url" target="_blank">GitHub</v-btn>
                                             </v-card-actions>

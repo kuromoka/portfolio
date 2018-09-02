@@ -68522,9 +68522,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68796,12 +68793,7 @@ var render = function() {
                                   [
                                     _c(
                                       "v-flex",
-                                      {
-                                        attrs: {
-                                          md2: "",
-                                          "hidden-sm-and-down": ""
-                                        }
-                                      },
+                                      { attrs: { xs12: "", md2: "" } },
                                       [
                                         _c("h3", { staticClass: "title" }, [
                                           _vm._v(_vm._s(skill.name))
@@ -68848,21 +68840,6 @@ var render = function() {
                                         1
                                       )
                                     }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "v-flex",
-                                      {
-                                        attrs: {
-                                          xs12: "",
-                                          "hidden-md-and-up": ""
-                                        }
-                                      },
-                                      [
-                                        _c("h3", { staticClass: "title" }, [
-                                          _vm._v(_vm._s(skill.name))
-                                        ])
-                                      ]
-                                    ),
                                     _vm._v(" "),
                                     _vm._l(skill.details, function(detail) {
                                       return _c(
@@ -68926,14 +68903,14 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-layout",
-                                { attrs: { wrap: "", "fill-height": "" } },
+                                { attrs: { wrap: "" } },
                                 _vm._l(_vm.projects, function(project, index) {
                                   return _c(
                                     "v-flex",
                                     {
                                       key: project.id,
-                                      class: { "px-2": index === 1 },
-                                      attrs: { xs4: "" }
+                                      class: { "center-px": index === 1 },
+                                      attrs: { xs12: "", md4: "" }
                                     },
                                     [
                                       _c(
@@ -68972,7 +68949,7 @@ var render = function() {
                                                     "h4",
                                                     [
                                                       _vm._v(
-                                                        "\n                                                Using skills:\n                                                "
+                                                        "\n                                                    Using skills:\n                                                    "
                                                       ),
                                                       _vm._l(
                                                         project.project_skills,
@@ -68987,11 +68964,11 @@ var render = function() {
                                                             },
                                                             [
                                                               _vm._v(
-                                                                "\n                                                    " +
+                                                                "\n                                                        " +
                                                                   _vm._s(
                                                                     project_skill.name
                                                                   ) +
-                                                                  "\n                                                "
+                                                                  "\n                                                    "
                                                               )
                                                             ]
                                                           )
@@ -69016,6 +68993,7 @@ var render = function() {
                                           _vm._v(" "),
                                           _c(
                                             "v-card-actions",
+                                            { staticClass: "pa-0" },
                                             [
                                               _c(
                                                 "v-btn",
