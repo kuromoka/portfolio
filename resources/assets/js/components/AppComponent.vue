@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-navigation-drawer app v-model="drawer">
+        <v-navigation-drawer app disable-resize-watcher disable-route-watcher v-model="drawer">
             <v-list dense class="pt-0">
                 <v-list-tile v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
                     <v-list-tile-content>
@@ -78,7 +78,7 @@
                                                     <p class="mt-4" v-html="project.description"></p>
                                                 </div>
                                             </v-card-title>
-                                            <v-card-actions class="pa-0">
+                                            <v-card-actions>
                                                 <v-btn flat color="secondary" :href="project.site_url" target="_blank">Site</v-btn>
                                                 <v-btn flat color="secondary" :href="project.github_url" target="_blank">GitHub</v-btn>
                                             </v-card-actions>

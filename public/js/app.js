@@ -68571,7 +68571,11 @@ var render = function() {
       _c(
         "v-navigation-drawer",
         {
-          attrs: { app: "" },
+          attrs: {
+            app: "",
+            "disable-resize-watcher": "",
+            "disable-route-watcher": ""
+          },
           model: {
             value: _vm.drawer,
             callback: function($$v) {
@@ -68993,7 +68997,6 @@ var render = function() {
                                           _vm._v(" "),
                                           _c(
                                             "v-card-actions",
-                                            { staticClass: "pa-0" },
                                             [
                                               _c(
                                                 "v-btn",
