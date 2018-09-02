@@ -68328,6 +68328,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68407,6 +68412,10 @@ var render = function() {
                               _vm._v(" "),
                               _c("v-btn", { attrs: { flat: "", dark: "" } }, [
                                 _vm._v("Projects")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-btn", { attrs: { flat: "", dark: "" } }, [
+                                _vm._v("Contact")
                               ])
                             ],
                             1
@@ -68876,7 +68885,20 @@ var render = function() {
                               )
                             ],
                             1
-                          )
+                          ),
+                          _vm._v(" "),
+                          _c("v-flex", { attrs: { xs12: "", "mt-5": "" } }, [
+                            _c(
+                              "h2",
+                              {
+                                staticClass:
+                                  "headline indigo--text text--darken-1"
+                              },
+                              [_vm._v("Contact")]
+                            ),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("a")])
+                          ])
                         ],
                         1
                       )

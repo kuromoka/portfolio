@@ -11,6 +11,7 @@
                                 <v-btn flat dark>About</v-btn>
                                 <v-btn flat dark>Skills</v-btn>
                                 <v-btn flat dark>Projects</v-btn>
+                                <v-btn flat dark>Contact</v-btn>
                             </v-toolbar-items>
                         </v-flex>
                     </v-layout>
@@ -97,6 +98,10 @@
                                         </v-card>
                                     </v-flex>
                                 </v-layout>
+                            </v-flex>
+                            <v-flex xs12 mt-5>
+                                <h2 class="headline indigo--text text--darken-1">Contact</h2>
+                                <p>a</p>
                             </v-flex>
                         </v-layout>
                     </v-flex>
