@@ -69174,11 +69174,11 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-layout",
-                { attrs: { "justify-end": "" } },
+                { attrs: { "text-xs-center": "", "justify-end": "" } },
                 [
                   _c(
                     "v-flex",
-                    { attrs: { xs1: "" } },
+                    { attrs: { xs3: "" } },
                     [
                       _c(
                         "v-btn",

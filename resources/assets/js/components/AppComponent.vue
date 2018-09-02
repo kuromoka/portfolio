@@ -117,8 +117,8 @@
                         </v-layout>
                     </v-flex>
                 </v-layout>
-                <v-layout justify-end>
-                    <v-flex xs1>
+                <v-layout text-xs-center justify-end>
+                    <v-flex xs3>
                         <v-btn flat color="secondary" @click="$vuetify.goTo('#app', {offset: 0})">
                             Top<v-icon medium class="ml-2">fas fa-arrow-circle-up</v-icon>
                         </v-btn>
