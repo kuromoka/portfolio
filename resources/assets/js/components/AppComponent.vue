@@ -47,12 +47,19 @@
                                 <h2 class="headline indigo--text text--darken-1">Skills</h2>
                                 <p>Here is my skill sets and those levels of understanding.</p>
                                 <v-layout wrap align-center v-for="skill in skills" :key="skill.name">
-                                    <v-flex xs2>
-                                    <h3 class="title">{{ skill.name }}</h3>
+                                    <v-flex md2 hidden-sm-and-down>
+                                        <h3 class="title">{{ skill.name }}</h3>
                                     </v-flex>
-                                    <v-flex xs2 text-xs-center v-for="detail in skill.details" :key="detail.name">
+                                    <v-flex md2 hidden-sm-and-down text-xs-center v-for="detail in skill.details" :key="detail.name">
                                         <h4 class="subheading">{{ detail.name }}</h4>
                                         <v-progress-circular size="64" :color="skill.color" v-model="detail.value">{{ detail.value }}</v-progress-circular>
+                                    </v-flex>
+                                    <v-flex xs12 hidden-md-and-up>
+                                        <h3 class="title">{{ skill.name }}</h3>
+                                    </v-flex>
+                                    <v-flex xs4 hidden-md-and-up text-xs-center v-for="detail in skill.details" :key="detail.name">
+                                        <h4 class="subheading">{{ detail.name }}</h4>
+                                        <v-progress-circular size="48" :color="skill.color" v-model="detail.value">{{ detail.value }}</v-progress-circular>
                                     </v-flex>
                                 </v-layout>
                             </v-flex>

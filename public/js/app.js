@@ -68518,6 +68518,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68787,11 +68794,20 @@ var render = function() {
                                     attrs: { wrap: "", "align-center": "" }
                                   },
                                   [
-                                    _c("v-flex", { attrs: { xs2: "" } }, [
-                                      _c("h3", { staticClass: "title" }, [
-                                        _vm._v(_vm._s(skill.name))
-                                      ])
-                                    ]),
+                                    _c(
+                                      "v-flex",
+                                      {
+                                        attrs: {
+                                          md2: "",
+                                          "hidden-sm-and-down": ""
+                                        }
+                                      },
+                                      [
+                                        _c("h3", { staticClass: "title" }, [
+                                          _vm._v(_vm._s(skill.name))
+                                        ])
+                                      ]
+                                    ),
                                     _vm._v(" "),
                                     _vm._l(skill.details, function(detail) {
                                       return _c(
@@ -68799,7 +68815,8 @@ var render = function() {
                                         {
                                           key: detail.name,
                                           attrs: {
-                                            xs2: "",
+                                            md2: "",
+                                            "hidden-sm-and-down": "",
                                             "text-xs-center": ""
                                           }
                                         },
@@ -68815,6 +68832,61 @@ var render = function() {
                                             {
                                               attrs: {
                                                 size: "64",
+                                                color: skill.color
+                                              },
+                                              model: {
+                                                value: detail.value,
+                                                callback: function($$v) {
+                                                  _vm.$set(detail, "value", $$v)
+                                                },
+                                                expression: "detail.value"
+                                              }
+                                            },
+                                            [_vm._v(_vm._s(detail.value))]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-flex",
+                                      {
+                                        attrs: {
+                                          xs12: "",
+                                          "hidden-md-and-up": ""
+                                        }
+                                      },
+                                      [
+                                        _c("h3", { staticClass: "title" }, [
+                                          _vm._v(_vm._s(skill.name))
+                                        ])
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _vm._l(skill.details, function(detail) {
+                                      return _c(
+                                        "v-flex",
+                                        {
+                                          key: detail.name,
+                                          attrs: {
+                                            xs4: "",
+                                            "hidden-md-and-up": "",
+                                            "text-xs-center": ""
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "h4",
+                                            { staticClass: "subheading" },
+                                            [_vm._v(_vm._s(detail.name))]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-progress-circular",
+                                            {
+                                              attrs: {
+                                                size: "48",
                                                 color: skill.color
                                               },
                                               model: {
