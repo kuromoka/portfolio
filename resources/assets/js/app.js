@@ -8,6 +8,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import '@fortawesome/fontawesome-free/css/all.css';
 import Vuetify from 'vuetify';
 import colors from 'vuetify/es5/util/colors'
 import 'vuetify/dist/vuetify.min.css';
@@ -28,5 +29,6 @@ window.Vue.use(Vuetify, {
 Vue.component('app-component', require('./components/AppComponent.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    iconfont: 'fa',
 });
