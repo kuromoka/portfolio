@@ -9454,6 +9454,10 @@ p {
   text-transform: none !important;
 }
 
+.v-navigation-drawer i {
+  width: 30px;
+}
+
 .v-content {
   margin-bottom: 24px;
 }

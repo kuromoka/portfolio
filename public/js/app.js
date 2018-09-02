@@ -68543,12 +68543,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      drawer: null,
-      menus: [{ name: "About", target: ".about", offset: -80 }, { name: "Skills", target: ".skills", offset: -80 }, { name: "Projects", target: ".projects", offset: -80 }, { name: "Contact", target: ".contact", offset: -80 }],
+      drawer: false,
+      menus: [{ name: "About", icon: "fas fa-user", target: ".about", offset: -80 }, { name: "Skills", icon: "fas fa-code", target: ".skills", offset: -80 }, { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -80 }, { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -80 }],
       phpSkills: [{ name: "PHP", value: 100 }, { name: "CakePHP", value: 60 }, { name: "PHPUnit", value: 60 }, { name: "Composer", value: 60 }, { name: "Laravel", value: 40 }],
       jsSkills: [{ name: "JavaScript", value: 80 }, { name: "jQuery", value: 80 }, { name: "React", value: 40 }, { name: "Vue.js", value: 40 }],
       toolSkills: [{ name: "Git", value: 100 }, { name: "GitHub", value: 80 }, { name: "Slack", value: 80 }, { name: "Docker", value: 60 }, { name: "CI Tools", value: 60 }],
@@ -68579,7 +68581,7 @@ var render = function() {
       _c(
         "v-navigation-drawer",
         {
-          attrs: { fixed: "", app: "", "disable-resize-watcher": "" },
+          attrs: { app: "" },
           model: {
             value: _vm.drawer,
             callback: function($$v) {
@@ -68606,7 +68608,20 @@ var render = function() {
                 [
                   _c(
                     "v-list-tile-content",
-                    [_c("v-list-tile-title", [_vm._v(_vm._s(menu.name))])],
+                    [
+                      _c(
+                        "v-list-tile-title",
+                        [
+                          _c(
+                            "v-icon",
+                            { staticClass: "mr-4", attrs: { small: "" } },
+                            [_vm._v(_vm._s(menu.icon))]
+                          ),
+                          _vm._v(_vm._s(menu.name) + "\n                    ")
+                        ],
+                        1
+                      )
+                    ],
                     1
                   )
                 ],
@@ -68669,12 +68684,20 @@ var render = function() {
                                     }
                                   },
                                   [
+                                    _c(
+                                      "v-icon",
+                                      {
+                                        staticClass: "mr-2",
+                                        attrs: { small: "" }
+                                      },
+                                      [_vm._v(_vm._s(menu.icon))]
+                                    ),
                                     _vm._v(
-                                      "\n                                " +
-                                        _vm._s(menu.name) +
+                                      _vm._s(menu.name) +
                                         "\n                            "
                                     )
-                                  ]
+                                  ],
+                                  1
                                 )
                               })
                             ],
@@ -69279,7 +69302,7 @@ var render = function() {
                           }
                         },
                         [
-                          _vm._v("\n                        Top "),
+                          _vm._v("\n                        Top"),
                           _c(
                             "v-icon",
                             { staticClass: "ml-2", attrs: { medium: "" } },

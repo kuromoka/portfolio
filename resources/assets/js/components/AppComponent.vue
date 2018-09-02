@@ -1,10 +1,12 @@
 <template>
     <v-app>
-        <v-navigation-drawer fixed app disable-resize-watcher v-model="drawer">
+        <v-navigation-drawer app v-model="drawer">
             <v-list dense class="pt-0">
                 <v-list-tile v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
                     <v-list-tile-content>
-                        <v-list-tile-title>{{ menu.name }}</v-list-tile-title>
+                        <v-list-tile-title>
+                            <v-icon small class="mr-4">{{menu.icon}}</v-icon>{{ menu.name }}
+                        </v-list-tile-title>
                     </v-list-tile-content>
                 </v-list-tile>
             </v-list>
@@ -18,7 +20,7 @@
                             <v-toolbar-items class="hidden-sm-and-down">
                                 <v-spacer></v-spacer>
                                 <v-btn flat dark v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
-                                    {{ menu.name }}
+                                    <v-icon small class="mr-2">{{menu.icon}}</v-icon>{{ menu.name }}
                                 </v-btn>
                             </v-toolbar-items>
                         </v-flex>
@@ -141,7 +143,7 @@
                 <v-layout justify-end>
                     <v-flex xs1>
                         <v-btn flat color="secondary" @click="$vuetify.goTo('#app', {offset: 0})">
-                            Top <v-icon medium class="ml-2">fas fa-arrow-circle-up</v-icon>
+                            Top<v-icon medium class="ml-2">fas fa-arrow-circle-up</v-icon>
                         </v-btn>
                     </v-flex>
                 </v-layout>
@@ -163,12 +165,12 @@
   export default {
     data () {
       return {
-        drawer: null,
+        drawer: false,
         menus: [
-          { name: "About", target: ".about", offset: -80 },
-          { name: "Skills", target: ".skills", offset: -80 },
-          { name: "Projects", target: ".projects", offset: -80 },
-          { name: "Contact", target: ".contact", offset: -80 },
+          { name: "About", icon: "fas fa-user", target: ".about", offset: -80 },
+          { name: "Skills", icon: "fas fa-code", target: ".skills", offset: -80 },
+          { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -80 },
+          { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -80 },
         ],
         phpSkills: [
           { name: "PHP", value: 100 },
