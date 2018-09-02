@@ -13,10 +13,9 @@
             <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
             <v-layout align-center>
                 <v-flex xs6 offset-xs3>
-                    <v-layout row wrap justify-end>
+                    <v-layout wrap>
                         <v-flex xs12>
                             <v-toolbar-items class="hidden-sm-and-down">
-                                <h1 class="mb-0"><a href="/"><img src="/images/logo.png" alt="kuromo works" width="234" height="60"></a></h1>
                                 <v-spacer></v-spacer>
                                 <v-btn flat dark v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
                                     {{ menu.name }}
@@ -31,7 +30,7 @@
             <v-container fluid pa-0>
                 <v-layout align-center header>
                     <v-flex xs6 offset-xs3>
-                        <h3 class="display-1 white--text">About me</h3>
+                        <h1 class="display-1 white--text">About kuromoka</h1>
                     </v-flex>
                 </v-layout>
                 <v-layout align-center mt-4>
@@ -148,10 +147,12 @@
                 </v-layout>
             </v-container>
         </v-content>
-        <v-footer app absolute color="primary">
+        <v-footer app absolute height="auto" color="primary">
             <v-layout text-xs-center>
                 <v-flex xs12 white--text>
-                    <strong>&copy; 2018 kuromoka</strong>
+                    <p class="mt-3"><a href="/"><img src="/images/logo.png" alt="kuromo works" height="30px"></a></p>
+                    <v-divider></v-divider>
+                    <p><small>&copy; 2018 kuromoka</small></p>
                 </v-flex>
             </v-layout>
         </v-footer>

@@ -68542,6 +68542,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68641,7 +68642,7 @@ var render = function() {
                 [
                   _c(
                     "v-layout",
-                    { attrs: { row: "", wrap: "", "justify-end": "" } },
+                    { attrs: { wrap: "" } },
                     [
                       _c(
                         "v-flex",
@@ -68651,19 +68652,6 @@ var render = function() {
                             "v-toolbar-items",
                             { staticClass: "hidden-sm-and-down" },
                             [
-                              _c("h1", { staticClass: "mb-0" }, [
-                                _c("a", { attrs: { href: "/" } }, [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "/images/logo.png",
-                                      alt: "kuromo works",
-                                      width: "234",
-                                      height: "60"
-                                    }
-                                  })
-                                ])
-                              ]),
-                              _vm._v(" "),
                               _c("v-spacer"),
                               _vm._v(" "),
                               _vm._l(_vm.menus, function(menu) {
@@ -68720,8 +68708,8 @@ var render = function() {
                 { attrs: { "align-center": "", header: "" } },
                 [
                   _c("v-flex", { attrs: { xs6: "", "offset-xs3": "" } }, [
-                    _c("h3", { staticClass: "display-1 white--text" }, [
-                      _vm._v("About me")
+                    _c("h1", { staticClass: "display-1 white--text" }, [
+                      _vm._v("About kuromoka")
                     ])
                   ])
                 ],
@@ -69315,15 +69303,34 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-footer",
-        { attrs: { app: "", absolute: "", color: "primary" } },
+        { attrs: { app: "", absolute: "", height: "auto", color: "primary" } },
         [
           _c(
             "v-layout",
             { attrs: { "text-xs-center": "" } },
             [
-              _c("v-flex", { attrs: { xs12: "", "white--text": "" } }, [
-                _c("strong", [_vm._v("© 2018 kuromoka")])
-              ])
+              _c(
+                "v-flex",
+                { attrs: { xs12: "", "white--text": "" } },
+                [
+                  _c("p", { staticClass: "mt-3" }, [
+                    _c("a", { attrs: { href: "/" } }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/logo.png",
+                          alt: "kuromo works",
+                          height: "30px"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c("p", [_c("small", [_vm._v("© 2018 kuromoka")])])
+                ],
+                1
+              )
             ],
             1
           )
