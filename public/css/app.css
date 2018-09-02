@@ -9502,3 +9502,19 @@ p {
 .projects .content p {
   font-size: 1.1rem;
 }
+
+.accounts .github i {
+  color: #000;
+}
+
+.accounts .twitter {
+  margin-left: 5px;
+}
+
+.accounts .twitter i {
+  color: #55acee;
+}
+
+.contact form {
+  text-align: center;
+}

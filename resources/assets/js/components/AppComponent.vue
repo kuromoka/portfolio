@@ -24,7 +24,7 @@
                     <h3 class="display-1 white--text">About me</h3>
                 </v-flex>
             </v-layout>
-            <v-container fluid>
+            <v-container fluid fill-height>
                 <v-layout align-center>
                     <v-flex xs6 offset-xs3>
                         <v-layout row wrap>
@@ -99,9 +99,35 @@
                                     </v-flex>
                                 </v-layout>
                             </v-flex>
-                            <v-flex xs12 mt-5>
+                            <v-flex xs12 mt-5 contact>
                                 <h2 class="headline indigo--text text--darken-1">Contact</h2>
-                                <p>a</p>
+                                <p>If you have any questions, please feel free to contact me via ways below.</p>
+                                <h3 class="title">Accounts</h3>
+                                <div class="accounts">
+                                    <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
+                                    <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
+                                </div>
+                                <h3 class="title mt-3">Form</h3>
+                                <v-form ref="form" v-model="valid" lazy-validation>
+                                    <v-text-field
+                                    v-model="name"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="Name"
+                                    required
+                                    ></v-text-field>
+                                    <v-text-field
+                                    v-model="email"
+                                    :rules="emailRules"
+                                    label="E-mail"
+                                    required
+                                    ></v-text-field>
+                                    <v-textarea
+                                    name="input-7-1"
+                                    label="Content"
+                                    ></v-textarea>
+                                    <v-btn color="primary" @click="submit">Submit</v-btn>
+                                </v-form>
                             </v-flex>
                         </v-layout>
                     </v-flex>

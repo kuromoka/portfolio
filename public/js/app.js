@@ -68496,6 +68496,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68617,7 +68642,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-container",
-            { attrs: { fluid: "" } },
+            { attrs: { fluid: "", "fill-height": "" } },
             [
               _c(
                 "v-layout",
@@ -69052,7 +69077,7 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "v-flex",
-                            { attrs: { xs12: "", "mt-5": "" } },
+                            { attrs: { xs12: "", "mt-5": "", contact: "" } },
                             [
                               _c(
                                 "h2",
@@ -69063,9 +69088,119 @@ var render = function() {
                                 [_vm._v("Contact")]
                               ),
                               _vm._v(" "),
-                              _c("p", [_vm._v("a")]),
+                              _c("p", [
+                                _vm._v(
+                                  "If you have any questions, please feel free to contact me via ways below."
+                                )
+                              ]),
                               _vm._v(" "),
-                              _c("v-icon", [_vm._v("fas fa-lock")])
+                              _c("h3", { staticClass: "title" }, [
+                                _vm._v("Accounts")
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "accounts" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "github",
+                                    attrs: {
+                                      href: "https://github.com/kuromoka",
+                                      target: "_blank"
+                                    }
+                                  },
+                                  [
+                                    _c("v-icon", { attrs: { large: "" } }, [
+                                      _vm._v("fab fa-github-square")
+                                    ])
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "twitter",
+                                    attrs: {
+                                      href: "https://twitter.com/kuromoka16",
+                                      target: "_blank"
+                                    }
+                                  },
+                                  [
+                                    _c("v-icon", { attrs: { large: "" } }, [
+                                      _vm._v("fab fa-twitter-square")
+                                    ])
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("h3", { staticClass: "title mt-3" }, [
+                                _vm._v("Form")
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "v-form",
+                                {
+                                  ref: "form",
+                                  attrs: { "lazy-validation": "" },
+                                  model: {
+                                    value: _vm.valid,
+                                    callback: function($$v) {
+                                      _vm.valid = $$v
+                                    },
+                                    expression: "valid"
+                                  }
+                                },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      rules: _vm.nameRules,
+                                      counter: 10,
+                                      label: "Name",
+                                      required: ""
+                                    },
+                                    model: {
+                                      value: _vm.name,
+                                      callback: function($$v) {
+                                        _vm.name = $$v
+                                      },
+                                      expression: "name"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      rules: _vm.emailRules,
+                                      label: "E-mail",
+                                      required: ""
+                                    },
+                                    model: {
+                                      value: _vm.email,
+                                      callback: function($$v) {
+                                        _vm.email = $$v
+                                      },
+                                      expression: "email"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-textarea", {
+                                    attrs: {
+                                      name: "input-7-1",
+                                      label: "Content"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { color: "primary" },
+                                      on: { click: _vm.submit }
+                                    },
+                                    [_vm._v("Submit")]
+                                  )
+                                ],
+                                1
+                              )
                             ],
                             1
                           )
