@@ -22,3 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('projects', 'Api\ProjectController')->only([
     'index'
 ]);
+
+Route::apiResource('inquiries', 'Api\InquiryController')->only([
+    'store'
+]);
