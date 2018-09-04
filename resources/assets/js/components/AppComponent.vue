@@ -187,7 +187,7 @@
       }
     },
     computed: {
-      isDisabled() {
+      isDisabled () {
         if (this.name !== '' && this.email !== '' && this.message !== '') {
           return false;
         } else {
@@ -198,7 +198,18 @@
     mounted () {
       axios
         .get('/api/projects')
-        .then(response => (this.projects = response.data))
+        .then(response => (this.projects = response.data));
     },
+    methods: {
+      submit () {
+        axios
+          .post('api/inquiries', {
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          })
+          .then(response => (console.log(response.data)));
+      }
+    }
   }
 </script>

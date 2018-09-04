@@ -68553,6 +68553,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     axios.get('/api/projects').then(function (response) {
       return _this.projects = response.data;
     });
+  },
+
+  methods: {
+    submit: function submit() {
+      axios.post('api/inquiries', {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      }).then(function (response) {
+        return console.log(response.data);
+      });
+    }
   }
 });
 
