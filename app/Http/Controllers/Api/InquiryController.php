@@ -15,7 +15,10 @@ class InquiryController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        var_dump($request->all());
+        $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'message' => 'required|max:1024',
+        ]);
     }
 }

@@ -208,7 +208,8 @@
             email: this.email,
             message: this.message,
           })
-          .then(response => (console.log(response.data)));
+          .then(response => (console.log(response.data)))
+          .catch(error => {console.log(error.response)});
       }
     }
   }
