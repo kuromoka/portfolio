@@ -92,26 +92,12 @@
                                 <h3 class="title">GitHub / Twitter</h3>
                                 <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
                                 <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
-                                <h3 class="title mt-3">Contact Form</h3>
+                                <h3 class="title mt-3">Form</h3>
                                 <v-form ref="form" v-model="valid" lazy-validation>
-                                    <v-text-field
-                                    v-model="name"
-                                    :rules="nameRules"
-                                    :counter="10"
-                                    label="Name"
-                                    required
-                                    ></v-text-field>
-                                    <v-text-field
-                                    v-model="email"
-                                    :rules="emailRules"
-                                    label="E-mail"
-                                    required
-                                    ></v-text-field>
-                                    <v-textarea
-                                    name="input-7-1"
-                                    label="Content"
-                                    ></v-textarea>
-                                    <v-btn color="primary" @click="submit">Submit</v-btn>
+                                    <v-text-field v-model="name" label="Name"></v-text-field>
+                                    <v-text-field v-model="email" label="E-mail"></v-text-field>
+                                    <v-textarea v-model="message" label="Message"></v-textarea>
+                                    <v-btn color="primary" :disabled=isDisabled @click="submit">Submit</v-btn>
                                 </v-form>
                             </v-flex>
                         </v-layout>
@@ -195,6 +181,18 @@
           },
         ],
         projects: null,
+        name: '',
+        email: '',
+        message: '',
+      }
+    },
+    computed: {
+      isDisabled() {
+        if (this.name !== '' && this.email !== '' && this.message !== '') {
+          return false;
+        } else {
+          return true;
+        }
       }
     },
     mounted () {

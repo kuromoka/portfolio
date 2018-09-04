@@ -68508,20 +68508,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68545,8 +68531,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         color: "grey darken-1",
         details: [{ name: "Linux", value: 60 }, { name: "MySQL", value: 60 }, { name: "HTML", value: 60 }, { name: "CSS", value: 60 }, { name: "C#", value: 40 }]
       }],
-      projects: null
+      projects: null,
+      name: '',
+      email: '',
+      message: ''
     };
+  },
+
+  computed: {
+    isDisabled: function isDisabled() {
+      if (this.name !== '' && this.email !== '' && this.message !== '') {
+        return false;
+      } else {
+        return true;
+      }
+    }
   },
   mounted: function mounted() {
     var _this = this;
@@ -69096,7 +69095,7 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c("h3", { staticClass: "title mt-3" }, [
-                                _vm._v("Contact Form")
+                                _vm._v("Form")
                               ]),
                               _vm._v(" "),
                               _c(
@@ -69114,12 +69113,7 @@ var render = function() {
                                 },
                                 [
                                   _c("v-text-field", {
-                                    attrs: {
-                                      rules: _vm.nameRules,
-                                      counter: 10,
-                                      label: "Name",
-                                      required: ""
-                                    },
+                                    attrs: { label: "Name" },
                                     model: {
                                       value: _vm.name,
                                       callback: function($$v) {
@@ -69130,11 +69124,7 @@ var render = function() {
                                   }),
                                   _vm._v(" "),
                                   _c("v-text-field", {
-                                    attrs: {
-                                      rules: _vm.emailRules,
-                                      label: "E-mail",
-                                      required: ""
-                                    },
+                                    attrs: { label: "E-mail" },
                                     model: {
                                       value: _vm.email,
                                       callback: function($$v) {
@@ -69145,16 +69135,23 @@ var render = function() {
                                   }),
                                   _vm._v(" "),
                                   _c("v-textarea", {
-                                    attrs: {
-                                      name: "input-7-1",
-                                      label: "Content"
+                                    attrs: { label: "Message" },
+                                    model: {
+                                      value: _vm.message,
+                                      callback: function($$v) {
+                                        _vm.message = $$v
+                                      },
+                                      expression: "message"
                                     }
                                   }),
                                   _vm._v(" "),
                                   _c(
                                     "v-btn",
                                     {
-                                      attrs: { color: "primary" },
+                                      attrs: {
+                                        color: "primary",
+                                        disabled: _vm.isDisabled
+                                      },
                                       on: { click: _vm.submit }
                                     },
                                     [_vm._v("Submit")]
