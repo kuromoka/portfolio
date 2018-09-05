@@ -94,9 +94,10 @@
                                 <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
                                 <h3 class="title mt-3">Form</h3>
                                 <v-form ref="form" v-model="valid" lazy-validation>
-                                    <v-text-field v-model="name" label="Name"></v-text-field>
-                                    <v-text-field v-model="email" label="E-mail"></v-text-field>
-                                    <v-textarea v-model="message" label="Message"></v-textarea>
+                                    <v-alert :value="isAlerted" type="error"><p class="mb-0">An error occurred. Sorry, please try again later.</p></v-alert>
+                                    <v-text-field v-model="name" label="Name" :error-messages="nameErrors"></v-text-field>
+                                    <v-text-field v-model="email" label="E-mail" :error-messages="emailErrors"></v-text-field>
+                                    <v-textarea v-model="message" label="Message" :error-messages="messageErrors"></v-textarea>
                                     <v-btn color="primary" :disabled=isDisabled @click="submit">Submit</v-btn>
                                 </v-form>
                             </v-flex>
@@ -181,14 +182,18 @@
           },
         ],
         projects: null,
+        isAlerted: false,
         name: '',
+        nameErrors: [],
         email: '',
+        emailErrors: [],
         message: '',
+        messageErrors: [],
       }
     },
     computed: {
       isDisabled () {
-        if (this.name !== '' && this.email !== '' && this.message !== '') {
+        if (this.isAlerted === false && this.name !== '' && this.email !== '' && this.message !== '') {
           return false;
         } else {
           return true;
@@ -202,6 +207,10 @@
     },
     methods: {
       submit () {
+        this.nameErrors = [];
+        this.emailErrors = [];
+        this.messageErrors = [];
+
         axios
           .post('api/inquiries', {
             name: this.name,
@@ -209,7 +218,16 @@
             message: this.message,
           })
           .then(response => (console.log(response.data)))
-          .catch(error => {console.log(error.response)});
+          .catch(error => {
+            if (error.response.status === 422) {
+              const errors = error.response.data.errors;
+              this.nameErrors = typeof errors.name !== 'undefined' ? errors.name : [];
+              this.emailErrors = typeof errors.email !== 'undefined' ? errors.email : [];
+              this.messageErrors = typeof errors.message !== 'undefined' ? errors.message : [];
+            } else {
+              this.isAlerted = true;
+            }
+          });
       }
     }
   }
