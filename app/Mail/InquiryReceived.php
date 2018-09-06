@@ -36,11 +36,12 @@ class InquiryReceived extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.inquiries.received')
+        return $this->subject('Thank you for your inquiry.')
                     ->with([
-                        "name" => $this->inquiry->name,
-                        "email" => $this->inquiry->email,
-                        "message"  => $this->inquiry->message,
-                    ]);
+                        "text_name" => $this->inquiry->name,
+                        "text_email" => $this->inquiry->email,
+                        "text_message" => $this->inquiry->message,  // Renamed key not to conflict $message variable of Laravel.
+                    ])
+                    ->text('emails.inquiries.received');
     }
 }
