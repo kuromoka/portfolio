@@ -94,7 +94,16 @@
                                 <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
                                 <h3 class="title mt-3">Form</h3>
                                 <v-form ref="form" v-model="valid" lazy-validation>
-                                    <v-alert :value="isAlerted" type="error"><p class="mb-0">An error occurred. Sorry, please try again later.</p></v-alert>
+                                    <v-alert :value="isSucceeded" type="success">
+                                        <p class="mb-0">
+                                            Thank you for your inquiry. A confirmation email has been sent to your email.
+                                        </p>
+                                    </v-alert>
+                                    <v-alert :value="isAlerted" type="error">
+                                        <p class="mb-0">
+                                            An error occurred. Sorry, please try again later.
+                                        </p>
+                                    </v-alert>
                                     <v-text-field v-model="name" label="Name" :error-messages="nameErrors"></v-text-field>
                                     <v-text-field v-model="email" label="E-mail" :error-messages="emailErrors"></v-text-field>
                                     <v-textarea v-model="message" label="Message" :error-messages="messageErrors"></v-textarea>
@@ -182,6 +191,7 @@
           },
         ],
         projects: null,
+        isSucceeded: false,
         isAlerted: false,
         name: '',
         nameErrors: [],
@@ -193,7 +203,7 @@
     },
     computed: {
       isDisabled () {
-        if (this.isAlerted === false && this.name !== '' && this.email !== '' && this.message !== '') {
+        if (this.name !== '' && this.email !== '' && this.message !== '') {
           return false;
         } else {
           return true;
@@ -207,6 +217,9 @@
     },
     methods: {
       submit () {
+        this.isDisabled = true;
+        this.isSucceeded = false;
+        this.isAlerted = false;
         this.nameErrors = [];
         this.emailErrors = [];
         this.messageErrors = [];
@@ -217,14 +230,24 @@
             email: this.email,
             message: this.message,
           })
-          .then(response => (console.log(response.data)))
+          .then(response => {
+            this.name = '';
+            this.email = '';
+            this.message = '';
+            this.isSucceeded = true;
+          })
           .catch(error => {
             if (error.response.status === 422) {
+              // Validation errors
               const errors = error.response.data.errors;
               this.nameErrors = typeof errors.name !== 'undefined' ? errors.name : [];
               this.emailErrors = typeof errors.email !== 'undefined' ? errors.email : [];
               this.messageErrors = typeof errors.message !== 'undefined' ? errors.message : [];
             } else {
+              // Other errors
+              this.name = '';
+              this.email = '';
+              this.message = '';
               this.isAlerted = true;
             }
           });

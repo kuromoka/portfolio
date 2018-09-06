@@ -9537,3 +9537,7 @@ p {
 .v-content .contact form {
   text-align: center;
 }
+
+.v-content .contact form p {
+  font-size: 1.1rem;
+}

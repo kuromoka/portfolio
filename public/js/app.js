@@ -68509,6 +68509,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68533,6 +68542,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         details: [{ name: "Linux", value: 60 }, { name: "MySQL", value: 60 }, { name: "HTML", value: 60 }, { name: "CSS", value: 60 }, { name: "C#", value: 40 }]
       }],
       projects: null,
+      isSucceeded: false,
       isAlerted: false,
       name: '',
       nameErrors: [],
@@ -68545,7 +68555,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   computed: {
     isDisabled: function isDisabled() {
-      if (this.isAlerted === false && this.name !== '' && this.email !== '' && this.message !== '') {
+      if (this.name !== '' && this.email !== '' && this.message !== '') {
         return false;
       } else {
         return true;
@@ -68564,6 +68574,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     submit: function submit() {
       var _this2 = this;
 
+      this.isDisabled = true;
+      this.isSucceeded = false;
+      this.isAlerted = false;
       this.nameErrors = [];
       this.emailErrors = [];
       this.messageErrors = [];
@@ -68573,14 +68586,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         email: this.email,
         message: this.message
       }).then(function (response) {
-        return console.log(response.data);
+        _this2.name = '';
+        _this2.email = '';
+        _this2.message = '';
+        _this2.isSucceeded = true;
       }).catch(function (error) {
         if (error.response.status === 422) {
+          // Validation errors
           var errors = error.response.data.errors;
           _this2.nameErrors = typeof errors.name !== 'undefined' ? errors.name : [];
           _this2.emailErrors = typeof errors.email !== 'undefined' ? errors.email : [];
           _this2.messageErrors = typeof errors.message !== 'undefined' ? errors.message : [];
         } else {
+          // Other errors
+          _this2.name = '';
+          _this2.email = '';
+          _this2.message = '';
           _this2.isAlerted = true;
         }
       });
@@ -69148,6 +69169,23 @@ var render = function() {
                                     "v-alert",
                                     {
                                       attrs: {
+                                        value: _vm.isSucceeded,
+                                        type: "success"
+                                      }
+                                    },
+                                    [
+                                      _c("p", { staticClass: "mb-0" }, [
+                                        _vm._v(
+                                          "\n                                        Thank you for your inquiry. A confirmation email has been sent to your email.\n                                    "
+                                        )
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-alert",
+                                    {
+                                      attrs: {
                                         value: _vm.isAlerted,
                                         type: "error"
                                       }
@@ -69155,7 +69193,7 @@ var render = function() {
                                     [
                                       _c("p", { staticClass: "mb-0" }, [
                                         _vm._v(
-                                          "An error occurred. Sorry, please try again later."
+                                          "\n                                        An error occurred. Sorry, please try again later.\n                                    "
                                         )
                                       ])
                                     ]
