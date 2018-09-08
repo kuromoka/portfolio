@@ -14,7 +14,7 @@
         <v-toolbar app color="primary">
             <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
             <v-layout align-center>
-                <v-flex xs6 offset-xs3>
+                <v-flex xs12 md6 offset-md3>
                     <v-layout wrap>
                         <v-flex xs12>
                             <v-toolbar-items class="hidden-sm-and-down">
@@ -31,12 +31,12 @@
         <v-content>
             <v-container fluid pa-0>
                 <v-layout align-center header>
-                    <v-flex xs6 offset-xs3>
+                    <v-flex xs12 md6 offset-md3>
                         <h1 class="display-1 white--text">About kuromoka</h1>
                     </v-flex>
                 </v-layout>
                 <v-layout align-center mt-4>
-                    <v-flex xs6 offset-xs3>
+                    <v-flex xs12 md6 offset-md3>
                         <v-layout wrap>
                             <v-flex xs12 about>
                                 <h2 class="headline indigo--text text--darken-1">About</h2>
@@ -145,10 +145,10 @@
       return {
         drawer: false,
         menus: [
-          { name: "About", icon: "fas fa-user", target: ".about", offset: -80 },
-          { name: "Skills", icon: "fas fa-code", target: ".skills", offset: -80 },
-          { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -80 },
-          { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -80 },
+          { name: "About", icon: "fas fa-user", target: ".about", offset: -75 },
+          { name: "Skills", icon: "fas fa-code", target: ".skills", offset: -75 },
+          { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -75 },
+          { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -75 },
         ],
         skills: [
           {

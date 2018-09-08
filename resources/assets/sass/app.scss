@@ -32,8 +32,16 @@ p {
 }
 
 .v-content {
-  margin-bottom: 24px;
+  .v-content__wrap {
+    margin-bottom: 24px;
+  }
  
+  @media screen and (max-width: 959px) {
+    .v-content__wrap {
+      padding: 0 5px;
+    }
+  }
+
   .header {
     background-image: url('../images/header.jpg');
     background-repeat: no-repeat;
@@ -60,6 +68,12 @@ p {
     }
   }
 
+  @media screen and (max-width: 959px) {
+    .header {
+      height: 125px;
+    }
+  }
+
   .skills {
     .layout {
       border-bottom: 1px solid #ccc;
@@ -75,6 +89,10 @@ p {
     @media screen and (max-width: 959px) {
       .center-px {
         padding: 0;
+      }
+
+      .flex:not(:last-of-type) {
+        margin-bottom: 10px;
       }
     }
 

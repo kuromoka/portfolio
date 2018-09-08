@@ -9458,8 +9458,14 @@ p {
   width: 30px;
 }
 
-.v-content {
+.v-content .v-content__wrap {
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 959px) {
+  .v-content .v-content__wrap {
+    padding: 0 5px;
+  }
 }
 
 .v-content .header {
@@ -9489,6 +9495,12 @@ p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 959px) {
+  .v-content .header {
+    height: 125px;
+  }
+}
+
 .v-content .skills .layout {
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
@@ -9501,6 +9513,9 @@ p {
 @media screen and (max-width: 959px) {
   .v-content .projects .center-px {
     padding: 0;
+  }
+  .v-content .projects .flex:not(:last-of-type) {
+    margin-bottom: 10px;
   }
 }
 

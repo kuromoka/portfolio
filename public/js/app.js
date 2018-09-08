@@ -68528,7 +68528,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       drawer: false,
-      menus: [{ name: "About", icon: "fas fa-user", target: ".about", offset: -80 }, { name: "Skills", icon: "fas fa-code", target: ".skills", offset: -80 }, { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -80 }, { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -80 }],
+      menus: [{ name: "About", icon: "fas fa-user", target: ".about", offset: -75 }, { name: "Skills", icon: "fas fa-code", target: ".skills", offset: -75 }, { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -75 }, { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -75 }],
       skills: [{
         name: "PHP",
         color: "primary",
@@ -68704,7 +68704,7 @@ var render = function() {
             [
               _c(
                 "v-flex",
-                { attrs: { xs6: "", "offset-xs3": "" } },
+                { attrs: { xs12: "", md6: "", "offset-md3": "" } },
                 [
                   _c(
                     "v-layout",
@@ -68781,11 +68781,15 @@ var render = function() {
                 "v-layout",
                 { attrs: { "align-center": "", header: "" } },
                 [
-                  _c("v-flex", { attrs: { xs6: "", "offset-xs3": "" } }, [
-                    _c("h1", { staticClass: "display-1 white--text" }, [
-                      _vm._v("About kuromoka")
-                    ])
-                  ])
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", md6: "", "offset-md3": "" } },
+                    [
+                      _c("h1", { staticClass: "display-1 white--text" }, [
+                        _vm._v("About kuromoka")
+                      ])
+                    ]
+                  )
                 ],
                 1
               ),
@@ -68796,7 +68800,7 @@ var render = function() {
                 [
                   _c(
                     "v-flex",
-                    { attrs: { xs6: "", "offset-xs3": "" } },
+                    { attrs: { xs12: "", md6: "", "offset-md3": "" } },
                     [
                       _c(
                         "v-layout",
