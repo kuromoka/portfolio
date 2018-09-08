@@ -14,7 +14,7 @@ class ProjectsTableSeeder extends Seeder
         DB::table('projects')->insert([
             [
                 'name' => 'Portfolio',
-                'image_name' => '',
+                'image_name' => 'portfolio.jpg',
                 'description_ja' => '',
                 'description_en' => <<< EOF
 This is this portfolio site and adopted SPA.
@@ -25,7 +25,7 @@ EOF
             ],
             [
                 'name' => 'Cyger',
-                'image_name' => '',
+                'image_name' => 'cyger.jpg',
                 'description_ja' => '',
                 'description_en' =>  <<< EOF
 This is a composer package to get cryptocurrency price from various exchange APIs.
@@ -36,7 +36,7 @@ EOF
             ],
             [
                 'name' => 'Youtube Clone',
-                'image_name' => '',
+                'image_name' => 'youtube_clone.jpg',
                 'description_ja' => '',
                 'description_en' => <<< EOF
 I joined in <a href="https://chingu.io/" target="_blank">Ching</a> and built this YouTube clone site together with remote team members.<br>

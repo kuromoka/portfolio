@@ -68984,7 +68984,7 @@ var render = function() {
                                           _c("v-card-media", {
                                             attrs: {
                                               src:
-                                                "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
+                                                "/images/" + project.image_name,
                                               height: "200px"
                                             }
                                           }),
