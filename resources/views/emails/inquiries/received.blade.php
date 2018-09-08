@@ -1,5 +1,5 @@
-I have received your inquiry as below.
-I will reply as soon as possible.
+Your inquiry has been sent as below.
+I will reply within a few days as far as possible.
 
 Name:
 {{ $text_name }}.

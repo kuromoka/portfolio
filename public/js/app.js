@@ -68518,6 +68518,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68809,13 +68814,17 @@ var render = function() {
                             _vm._v(" "),
                             _c("p", [
                               _vm._v(
-                                "Hi, I'm Web Engineer. I have mainly been working as PHP Engineer."
+                                "\n                                Thank you for coming my portfolio site!\n                            "
                               )
                             ]),
                             _vm._v(" "),
                             _c("p", [
                               _vm._v(
-                                "Now I'm working at a development job related to ad technology in Tokyo."
+                                "\n                                I have been working as a Web Engineer for fourth year."
+                              ),
+                              _c("br"),
+                              _vm._v(
+                                "\n                                Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.\n                            "
                               )
                             ])
                           ]),
@@ -68835,7 +68844,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("p", [
                                 _vm._v(
-                                  "Here is my skill sets and those levels of understanding."
+                                  "My skill sets and those levels of understanding as below."
                                 )
                               ]),
                               _vm._v(" "),
@@ -69105,7 +69114,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("p", [
                                 _vm._v(
-                                  "If you have any questions, please feel free to contact me via ways below."
+                                  "If you have any questions, please feel free to contact me."
                                 )
                               ]),
                               _vm._v(" "),

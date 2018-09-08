@@ -17,7 +17,7 @@ class ProjectsTableSeeder extends Seeder
                 'image_name' => '',
                 'description_ja' => '',
                 'description_en' => <<< EOF
-This is this portfolio site.
+This is this portfolio site and adopted SPA.
 EOF
 ,
                 'site_url' => '/',
@@ -39,7 +39,7 @@ EOF
                 'image_name' => '',
                 'description_ja' => '',
                 'description_en' => <<< EOF
-I joined in <a href="https://chingu.io/" target="_blank">Ching</a> and built this YouTube clone site together with three remote team members.<br>
+I joined in <a href="https://chingu.io/" target="_blank">Ching</a> and built this YouTube clone site together with remote team members.<br>
 We were kept in touch by using Slack and GitHub in English.
 EOF
 ,

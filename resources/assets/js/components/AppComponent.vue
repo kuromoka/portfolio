@@ -40,12 +40,17 @@
                         <v-layout wrap>
                             <v-flex xs12 about>
                                 <h2 class="headline indigo--text text--darken-1">About</h2>
-                                <p>Hi, I'm Web Engineer. I have mainly been working as PHP Engineer.</p>
-                                <p>Now I'm working at a development job related to ad technology in Tokyo.</p>
+                                <p>
+                                    Thank you for coming my portfolio site!
+                                </p>
+                                <p>
+                                    I have been working as a Web Engineer for fourth year.<br>
+                                    Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.
+                                </p>
                             </v-flex>
                             <v-flex xs12 skills>
                                 <h2 class="headline indigo--text text--darken-1">Skills</h2>
-                                <p>Here is my skill sets and those levels of understanding.</p>
+                                <p>My skill sets and those levels of understanding as below.</p>
                                 <v-layout wrap align-center v-for="skill in skills" :key="skill.name">
                                     <v-flex xs12 md2>
                                         <h3 class="title">{{ skill.name }}</h3>
@@ -88,7 +93,7 @@
                             </v-flex>
                             <v-flex xs12 mt-4 contact>
                                 <h2 class="headline indigo--text text--darken-1">Contact</h2>
-                                <p>If you have any questions, please feel free to contact me via ways below.</p>
+                                <p>If you have any questions, please feel free to contact me.</p>
                                 <h3 class="title">GitHub / Twitter</h3>
                                 <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
                                 <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
