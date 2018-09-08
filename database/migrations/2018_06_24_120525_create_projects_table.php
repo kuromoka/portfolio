@@ -15,11 +15,10 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('language_id')->unsigned();
-            $table->foreign('language_id')->references('id')->on('languages');
             $table->string('name', 50);
             $table->string('image_name', 50);
-            $table->string('description', 1024);
+            $table->string('description_ja', 1024);
+            $table->string('description_en', 1024);
             $table->string('site_url', 255);
             $table->string('github_url', 255);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

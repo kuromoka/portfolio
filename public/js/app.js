@@ -69038,7 +69038,7 @@ var render = function() {
                                                     staticClass: "mt-4",
                                                     domProps: {
                                                       innerHTML: _vm._s(
-                                                        project.description
+                                                        project.description_en
                                                       )
                                                     }
                                                   })

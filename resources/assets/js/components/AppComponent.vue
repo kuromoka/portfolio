@@ -75,7 +75,7 @@
                                                             {{ project_skill.name }}
                                                         </span>
                                                     </h4>
-                                                    <p class="mt-4" v-html="project.description"></p>
+                                                    <p class="mt-4" v-html="project.description_en"></p>
                                                 </div>
                                             </v-card-title>
                                             <v-card-actions>

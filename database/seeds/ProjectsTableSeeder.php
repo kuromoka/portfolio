@@ -13,10 +13,10 @@ class ProjectsTableSeeder extends Seeder
     {
         DB::table('projects')->insert([
             [
-                'language_id' => '2',
                 'name' => 'Portfolio',
                 'image_name' => '',
-                'description' => <<< EOF
+                'description_ja' => '',
+                'description_en' => <<< EOF
 This is this portfolio site.
 EOF
 ,
@@ -24,10 +24,10 @@ EOF
                 'github_url' => 'https://github.com/kuromoka/portfolio',
             ],
             [
-                'language_id' => '2',
                 'name' => 'Cyger',
                 'image_name' => '',
-                'description' =>  <<< EOF
+                'description_ja' => '',
+                'description_en' =>  <<< EOF
 This is a composer package to get cryptocurrency price from various exchange APIs.
 EOF
 ,
@@ -35,10 +35,10 @@ EOF
                 'github_url' => 'https://github.com/kuromoka/cyger',
             ],
             [
-                'language_id' => '2',
                 'name' => 'Youtube Clone',
                 'image_name' => '',
-                'description' => <<< EOF
+                'description_ja' => '',
+                'description_en' => <<< EOF
 I joined in <a href="https://chingu.io/" target="_blank">Ching</a> and built this YouTube clone site together with three remote team members.<br>
 We were kept in touch by using Slack and GitHub in English.
 EOF
