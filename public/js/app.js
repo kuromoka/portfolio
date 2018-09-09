@@ -68530,7 +68530,7 @@ var render = function() {
         [
           _c("v-flex", { attrs: { xs12: "", md6: "", "offset-md3": "" } }, [
             _c("h1", { staticClass: "display-1 white--text" }, [
-              _vm._v("About kuromoka")
+              _vm._v("Language Selection")
             ])
           ])
         ],
@@ -69232,6 +69232,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("v-text-field", {
                             attrs: {
+                              color: "secondary",
                               label: "Name",
                               "error-messages": _vm.nameErrors
                             },
@@ -69246,6 +69247,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("v-text-field", {
                             attrs: {
+                              color: "secondary",
                               label: "E-mail",
                               "error-messages": _vm.emailErrors
                             },
@@ -69260,6 +69262,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("v-textarea", {
                             attrs: {
+                              color: "secondary",
                               label: "Message",
                               "error-messages": _vm.messageErrors
                             },
@@ -69276,7 +69279,7 @@ var render = function() {
                             "v-btn",
                             {
                               attrs: {
-                                color: "primary",
+                                color: "secondary",
                                 disabled: _vm.isDisabled
                               },
                               on: { click: _vm.submit }
@@ -69310,7 +69313,7 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  attrs: { flat: "", color: "secondary" },
+                  attrs: { flat: "", color: "red darken-1" },
                   on: {
                     click: function($event) {
                       _vm.$vuetify.goTo("#app", { offset: 0 })
