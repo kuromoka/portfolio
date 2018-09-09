@@ -1,18 +1,20 @@
 <template>
     <v-app>
-        <v-navigation-drawer app disable-resize-watcher disable-route-watcher v-model="drawer">
-            <v-list dense class="pt-0">
-                <v-list-tile v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
-                    <v-list-tile-content>
-                        <v-list-tile-title>
-                            <v-icon small class="mr-4">{{menu.icon}}</v-icon>{{ menu.name }}
-                        </v-list-tile-title>
-                    </v-list-tile-content>
-                </v-list-tile>
-            </v-list>
-        </v-navigation-drawer>
+        <template v-if="!isIndex">
+            <v-navigation-drawer app disable-resize-watcher disable-route-watcher v-model="drawer">
+                <v-list dense class="pt-0">
+                    <v-list-tile v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
+                        <v-list-tile-content>
+                            <v-list-tile-title>
+                                <v-icon small class="mr-4">{{menu.icon}}</v-icon>{{ menu.name }}
+                            </v-list-tile-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
+                </v-list>
+            </v-navigation-drawer>
+        </template>
         <v-toolbar app color="primary">
-            <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+            <v-toolbar-side-icon v-if="!isIndex" class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
             <v-layout align-center>
                 <v-flex xs12 md6 offset-md3>
                     <v-layout wrap>
@@ -61,13 +63,21 @@
     data () {
       return {
         drawer: false,
-        menus: [
-          { name: "About", icon: "fas fa-user", target: ".about", offset: -75 },
-          { name: "Skills", icon: "fas fa-code", target: ".skills", offset: -75 },
-          { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -75 },
-          { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -75 },
-        ],
       }
-    }
+    },
+    computed: {
+      menus () {
+        if (this.isIndex) {
+            return [];
+        } else {
+          return [
+            { name: "About", icon: "fas fa-user", target: ".about", offset: -75 },
+            { name: "Skills", icon: "fas fa-code", target: ".skills", offset: -75 },
+            { name: "Projects", icon: "fas fa-briefcase", target: ".projects", offset: -75 },
+            { name: "Contact", icon: "fas fa-envelope", target: ".contact", offset: -75 },
+          ]
+        } 
+      }
+    },
   }
 </script>

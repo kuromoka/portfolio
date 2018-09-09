@@ -9501,6 +9501,14 @@ p {
   }
 }
 
+.v-content .language {
+  text-align: center;
+}
+
+.v-content .language .v-btn {
+  border: 1px solid #3949ab;
+}
+
 .v-content .skills .layout {
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
