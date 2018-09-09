@@ -28,8 +28,8 @@
                 </v-flex>
             </v-layout>
         </v-toolbar>
-        <v-content v-if="isHome">
-            Home
+        <v-content v-if="isIndex">
+            <IndexComponent></IndexComponent>
         </v-content>
         <v-content v-else>
             <ShowComponent></ShowComponent>
@@ -47,14 +47,16 @@
 </template>
 
 <script>
+  import IndexComponent from './IndexComponent.vue';
   import ShowComponent from './ShowComponent.vue';
 
   export default {
     components: {
+      IndexComponent,
       ShowComponent,
     },
     props: {
-      isHome: Boolean,
+      isIndex: Boolean,
     },
     data () {
       return {

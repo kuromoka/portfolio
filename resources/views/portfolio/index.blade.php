@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="app">
-            <app-component :is-index="false"></app-component>
+            <app-component :is-index="true"></app-component>
         </div>
         <script src=" {{ mix('js/app.js') }} "></script>
     </body>

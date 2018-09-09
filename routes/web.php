@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'PortfolioController@index');
+Route::get('/{locale}', 'PortfolioController@show');

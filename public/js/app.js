@@ -68382,8 +68382,10 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ShowComponent_vue__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ShowComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ShowComponent_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__IndexComponent_vue__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__IndexComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__IndexComponent_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ShowComponent_vue__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ShowComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ShowComponent_vue__);
 //
 //
 //
@@ -68432,15 +68434,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    ShowComponent: __WEBPACK_IMPORTED_MODULE_0__ShowComponent_vue___default.a
+    IndexComponent: __WEBPACK_IMPORTED_MODULE_0__IndexComponent_vue___default.a,
+    ShowComponent: __WEBPACK_IMPORTED_MODULE_1__ShowComponent_vue___default.a
   },
   props: {
-    isHome: Boolean
+    isIndex: Boolean
   },
   data: function data() {
     return {
@@ -69353,8 +69357,8 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm.isHome
-        ? _c("v-content", [_vm._v("\n        Home\n    ")])
+      _vm.isIndex
+        ? _c("v-content", [_c("IndexComponent")], 1)
         : _c("v-content", [_c("ShowComponent")], 1),
       _vm._v(" "),
       _c(
@@ -69412,6 +69416,92 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 72 */,
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(17)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(74)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/IndexComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3d7cee7c", Component.options)
+  } else {
+    hotAPI.reload("data-v-3d7cee7c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-container",
+    { attrs: { fluid: "", "pa-0": "" } },
+    [
+      _c(
+        "v-layout",
+        { attrs: { "align-center": "", header: "" } },
+        [
+          _c("v-flex", { attrs: { xs12: "", md6: "", "offset-md3": "" } }, [
+            _c("h1", { staticClass: "display-1 white--text" }, [
+              _vm._v("About kuromoka")
+            ])
+          ])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3d7cee7c", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

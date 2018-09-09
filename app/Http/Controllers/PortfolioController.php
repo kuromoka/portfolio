@@ -10,4 +10,10 @@ class PortfolioController extends Controller
     {
         return view('portfolio.index');
     }
+
+    public function show($locale)
+    {
+        \App::setLocale($locale);
+        return view('portfolio.show');
+    }
 }
