@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="app">
-            <app-component></app-component>
+            <app-component :is-home="false"></app-component>
         </div>
         <script src=" {{ mix('js/app.js') }} "></script>
     </body>
