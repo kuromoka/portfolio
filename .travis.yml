@@ -16,6 +16,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --quiet $TRAVIS_BUILD_DIR/ $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH >/dev/null 2>&1
+  script: rsync -r --delete --exclude .env --exclude storage --quiet $TRAVIS_BUILD_DIR/ $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH >/dev/null 2>&1
   on:
     branch: master
