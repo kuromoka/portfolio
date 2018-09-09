@@ -21,8 +21,7 @@ class CreateProjectsTable extends Migration
             $table->string('description_en', 1024);
             $table->string('site_url', 255);
             $table->string('github_url', 255);
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamps();
         });
     }
 

@@ -22,6 +22,8 @@ EOF
 ,
                 'site_url' => '/',
                 'github_url' => 'https://github.com/kuromoka/portfolio',
+                'created_at' => new Datetime(),
+                'updated_at' => new Datetime(),
             ],
             [
                 'name' => 'Cyger',
@@ -33,6 +35,8 @@ EOF
 ,
                 'site_url' => 'https://packagist.org/packages/kuromoka/cyger',
                 'github_url' => 'https://github.com/kuromoka/cyger',
+                'created_at' => new Datetime(),
+                'updated_at' => new Datetime(),
             ],
             [
                 'name' => 'Youtube Clone',
@@ -45,6 +49,8 @@ EOF
 ,
                 'site_url' => 'https://youtube-clone-site.herokuapp.com/',
                 'github_url' => 'https://github.com/chingu-voyage6/Geckos-Team-27',
+                'created_at' => new Datetime(),
+                'updated_at' => new Datetime(),
             ],
         ]);
     }
