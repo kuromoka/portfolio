@@ -25,11 +25,11 @@
                             <v-flex xs12 md2>
                                 <h3 class="title">{{ skill.name }}</h3>
                             </v-flex>
-                            <v-flex md2 hidden-sm-and-down text-xs-center v-for="detail in skill.details" :key="detail.name">
+                            <v-flex md2 hidden-sm-and-down text-xs-center v-for="detail in skill.details" :key="'md_' + detail.name">
                                 <h4 class="subheading">{{ detail.name }}</h4>
                                 <v-progress-circular size="64" :color="skill.color" v-model="detail.value">{{ detail.value }}</v-progress-circular>
                             </v-flex>
-                            <v-flex xs4 hidden-md-and-up text-xs-center v-for="detail in skill.details" :key="detail.name">
+                            <v-flex xs4 hidden-md-and-up text-xs-center v-for="detail in skill.details" :key="'xs_' + detail.name">
                                 <h4 class="subheading">{{ detail.name }}</h4>
                                 <v-progress-circular size="48" :color="skill.color" v-model="detail.value">{{ detail.value }}</v-progress-circular>
                             </v-flex>
@@ -68,7 +68,7 @@
                         <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
                         <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
                         <h3 class="title mt-3">Form</h3>
-                        <v-form ref="form" v-model="valid" lazy-validation>
+                        <v-form ref="form" lazy-validation>
                             <v-alert :value="isSucceeded" type="success">
                                 <p class="mb-0">
                                     Thank you for your inquiry. A confirmation email has been sent to your email.

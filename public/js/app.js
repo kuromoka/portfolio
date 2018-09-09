@@ -68935,7 +68935,7 @@ var render = function() {
                               return _c(
                                 "v-flex",
                                 {
-                                  key: detail.name,
+                                  key: "md_" + detail.name,
                                   attrs: {
                                     md2: "",
                                     "hidden-sm-and-down": "",
@@ -68970,7 +68970,7 @@ var render = function() {
                               return _c(
                                 "v-flex",
                                 {
-                                  key: detail.name,
+                                  key: "xs_" + detail.name,
                                   attrs: {
                                     xs4: "",
                                     "hidden-md-and-up": "",
@@ -69192,17 +69192,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-form",
-                        {
-                          ref: "form",
-                          attrs: { "lazy-validation": "" },
-                          model: {
-                            value: _vm.valid,
-                            callback: function($$v) {
-                              _vm.valid = $$v
-                            },
-                            expression: "valid"
-                          }
-                        },
+                        { ref: "form", attrs: { "lazy-validation": "" } },
                         [
                           _c(
                             "v-alert",
