@@ -30,6 +30,7 @@ class InquiryController extends Controller
             'message' => $request->message,
         ]);
 
-        Mail::to($request->email)->send(new InquiryReceived($inquiry));
+        Mail::to($request->email)->send(new InquiryReceived($inquiry, InquiryReceived::CONFIRMATION_EMAIL));
+        Mail::to(\Config::get('constants.admin_email'))->send(new InquiryReceived($inquiry, InquiryReceived::ADMIN_EMAIL));
     }
 }

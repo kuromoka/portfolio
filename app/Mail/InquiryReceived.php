@@ -13,6 +13,16 @@ class InquiryReceived extends Mailable
     use Queueable, SerializesModels;
 
     /**
+     * @var int confirmation email
+     */
+    const CONFIRMATION_EMAIL = 1;
+
+    /**
+     * @var int admin email
+     */
+    const ADMIN_EMAIL = 2;
+
+    /**
      * Inquiry instance
      *
      * @var Inquiry
@@ -21,12 +31,15 @@ class InquiryReceived extends Mailable
 
     /**
      * Create a new message instance.
-     *
+     * 
+     * @param  Inquiry $inquiry
+     * @param  int     $type
      * @return void
      */
-    public function __construct(Inquiry $inquiry)
+    public function __construct(Inquiry $inquiry, $type)
     {
         $this->inquiry = $inquiry;
+        $this->type = $type;
     }
 
     /**
@@ -36,8 +49,19 @@ class InquiryReceived extends Mailable
      */
     public function build()
     {
-        return $this->subject('Thank you for your inquiry.')
+        $subject = '';
+        $body = '';
+        if ($this->type === self::CONFIRMATION_EMAIL) {
+            $subject = 'Thank you for your inquiry.';
+            $body = 'Your inquiry has been sent as below.' . PHP_EOL . 'I will reply within a few days as far as possible.';
+        } else if ($this->type === self::ADMIN_EMAIL) {
+            $subject = 'Inquiry has been sent.';
+            $body = 'Please check the the following contents.';
+        }
+
+        return $this->subject($subject)
                     ->with([
+                        "text_body" => $body,
                         "text_name" => $this->inquiry->name,
                         "text_email" => $this->inquiry->email,
                         "text_message" => $this->inquiry->message,  // Renamed key not to conflict $message variable of Laravel.
