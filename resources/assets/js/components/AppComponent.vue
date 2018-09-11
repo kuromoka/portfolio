@@ -39,9 +39,7 @@
         <v-footer app absolute height="auto" color="primary">
             <v-layout text-xs-center>
                 <v-flex xs12 white--text>
-                    <p class="mt-3"><a href="/"><img src="/images/logo.png" alt="kuromo works" height="30px"></a></p>
-                    <v-divider></v-divider>
-                    <p><small>&copy; 2018 kuromoka</small></p>
+                    <p class="mb-0"><small>&copy; 2018 kuromoka</small></p>
                 </v-flex>
             </v-layout>
         </v-footer>

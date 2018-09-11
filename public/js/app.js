@@ -68434,8 +68434,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -69517,28 +69515,11 @@ var render = function() {
             "v-layout",
             { attrs: { "text-xs-center": "" } },
             [
-              _c(
-                "v-flex",
-                { attrs: { xs12: "", "white--text": "" } },
-                [
-                  _c("p", { staticClass: "mt-3" }, [
-                    _c("a", { attrs: { href: "/" } }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/logo.png",
-                          alt: "kuromo works",
-                          height: "30px"
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("v-divider"),
-                  _vm._v(" "),
-                  _c("p", [_c("small", [_vm._v("© 2018 kuromoka")])])
-                ],
-                1
-              )
+              _c("v-flex", { attrs: { xs12: "", "white--text": "" } }, [
+                _c("p", { staticClass: "mb-0" }, [
+                  _c("small", [_vm._v("© 2018 kuromoka")])
+                ])
+              ])
             ],
             1
           )
