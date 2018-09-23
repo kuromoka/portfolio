@@ -57,11 +57,15 @@
     },
     props: {
       isIndex: Boolean,
+      locale: String,
     },
     data () {
       return {
         drawer: false,
       }
+    },
+    created () {
+        this.$i18n.locale = this.locale;
     },
     computed: {
       menus () {
