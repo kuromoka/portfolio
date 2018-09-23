@@ -13,7 +13,7 @@ class PortfolioController extends Controller
 
     public function show($locale)
     {
-        \Session::put('locale', $locale);
+        \App::setLocale($locale);
         return view('portfolio.show');
     }
 }
