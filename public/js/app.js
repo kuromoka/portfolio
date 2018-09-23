@@ -70666,12 +70666,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/api/projects').then(function (response) {
-      var projects = response.data.map(function (project) {
-        project['description'] = _this.$i18n.locale === 'ja' ? project['description_ja'] : project['description_en'];
-        return project;
-      });
-      _this.projects = projects;
+    axios.get('/api/projects', {
+      params: {
+        locale: this.$i18n.locale
+      }
+    }).then(function (response) {
+      return _this.projects = response.data;
     });
   },
 

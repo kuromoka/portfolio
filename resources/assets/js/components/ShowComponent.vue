@@ -169,14 +169,12 @@
     },
     mounted () {
       axios
-        .get('/api/projects')
-        .then(response => {
-            const projects = response.data.map(project => {
-                project['description'] = this.$i18n.locale === 'ja' ? project['description_ja'] : project['description_en'];
-                return project;
-            });
-            this.projects = projects;
-        });
+        .get('/api/projects', {
+            params: {
+                locale: this.$i18n.locale,
+            }
+        })
+        .then(response => (this.projects = response.data));
     },
     methods: {
       submit () {
