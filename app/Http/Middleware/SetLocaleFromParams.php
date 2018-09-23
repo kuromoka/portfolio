@@ -15,8 +15,8 @@ class SetLocaleFromParams
      */
     public function handle($request, Closure $next)
     {
-        $locale = $request->input('locale', 'en');
-        if (in_array($locale, array('en', 'ja'), true)) {
+        $locale = $request->input('locale', \Config::get('constants.locale.en'));
+        if (in_array($locale, \Config::get('constants.locale'), true)) {
             \App::setLocale($locale);
         }
 
