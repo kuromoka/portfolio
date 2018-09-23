@@ -70306,6 +70306,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -70321,7 +70341,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
   data: function data() {
     return {
-      drawer: false
+      drawer: false,
+      languages: [{ name: "English", icon: "flag-icon flag-icon-us", link: "/en" }, { name: "Japanese", icon: "flag-icon flag-icon-jp", link: "/ja" }]
     };
   },
   created: function created() {
@@ -70330,6 +70351,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   computed: {
+    currentLanguage: function currentLanguage() {
+      if (this.locale === "ja") {
+        return {
+          name: "Japanese",
+          icon: "flag-icon flag-icon-jp"
+        };
+      } else {
+        return {
+          name: "English",
+          icon: "flag-icon flag-icon-us"
+        };
+      }
+    },
     menus: function menus() {
       if (this.isIndex) {
         return [];
@@ -71290,45 +71324,112 @@ var render = function() {
                 _c(
                   "v-list",
                   { staticClass: "pt-0", attrs: { dense: "" } },
-                  _vm._l(_vm.menus, function(menu) {
-                    return _c(
-                      "v-list-tile",
-                      {
-                        key: menu.name,
-                        on: {
-                          click: function($event) {
-                            _vm.$vuetify.goTo(menu.target, {
-                              offset: menu.offset
-                            })
+                  [
+                    _vm._l(_vm.menus, function(menu) {
+                      return _c(
+                        "v-list-tile",
+                        {
+                          key: menu.name,
+                          on: {
+                            click: function($event) {
+                              _vm.$vuetify.goTo(menu.target, {
+                                offset: menu.offset
+                              })
+                            }
                           }
-                        }
-                      },
-                      [
-                        _c(
-                          "v-list-tile-content",
+                        },
+                        [
+                          _c(
+                            "v-list-tile-content",
+                            [
+                              _c(
+                                "v-list-tile-title",
+                                [
+                                  _c(
+                                    "v-icon",
+                                    {
+                                      staticClass: "mr-4",
+                                      attrs: { small: "" }
+                                    },
+                                    [_vm._v(_vm._s(menu.icon))]
+                                  ),
+                                  _vm._v(
+                                    _vm._s(menu.name) +
+                                      "\n                        "
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    }),
+                    _vm._v(" "),
+                    !_vm.isIndex
+                      ? _c(
+                          "v-menu",
+                          { attrs: { "offset-y": "" } },
                           [
                             _c(
-                              "v-list-tile-title",
+                              "v-list-tile",
+                              {
+                                attrs: {
+                                  slot: "activator",
+                                  flat: "",
+                                  dark: ""
+                                },
+                                slot: "activator"
+                              },
                               [
                                 _c(
                                   "v-icon",
                                   { staticClass: "mr-4", attrs: { small: "" } },
-                                  [_vm._v(_vm._s(menu.icon))]
+                                  [_vm._v(_vm._s(_vm.currentLanguage.icon))]
                                 ),
                                 _vm._v(
-                                  _vm._s(menu.name) +
-                                    "\n                        "
+                                  _vm._s(_vm.currentLanguage.name) +
+                                    "\n                    "
                                 )
                               ],
                               1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "v-list",
+                              _vm._l(_vm.languages, function(language, index) {
+                                return _c(
+                                  "v-list-tile",
+                                  {
+                                    key: index,
+                                    attrs: { href: language.link },
+                                    on: { click: true }
+                                  },
+                                  [
+                                    _c(
+                                      "v-icon",
+                                      {
+                                        staticClass: "mr-4",
+                                        attrs: { small: "" }
+                                      },
+                                      [_vm._v(_vm._s(language.icon))]
+                                    ),
+                                    _c("v-list-tile-title", [
+                                      _vm._v(_vm._s(language.name))
+                                    ])
+                                  ],
+                                  1
+                                )
+                              })
                             )
                           ],
                           1
                         )
-                      ],
-                      1
-                    )
-                  })
+                      : _vm._e()
+                  ],
+                  2
                 )
               ],
               1
@@ -71404,7 +71505,78 @@ var render = function() {
                                   ],
                                   1
                                 )
-                              })
+                              }),
+                              _vm._v(" "),
+                              !_vm.isIndex
+                                ? _c(
+                                    "v-menu",
+                                    { attrs: { "offset-y": "" } },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            slot: "activator",
+                                            flat: "",
+                                            dark: ""
+                                          },
+                                          slot: "activator"
+                                        },
+                                        [
+                                          _c(
+                                            "v-icon",
+                                            {
+                                              staticClass: "mr-2",
+                                              attrs: { small: "" }
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(_vm.currentLanguage.icon)
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(
+                                            _vm._s(_vm.currentLanguage.name) +
+                                              "\n                                "
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list",
+                                        _vm._l(_vm.languages, function(
+                                          language,
+                                          index
+                                        ) {
+                                          return _c(
+                                            "v-list-tile",
+                                            {
+                                              key: index,
+                                              attrs: { href: language.link },
+                                              on: { click: true }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  staticClass: "mr-2",
+                                                  attrs: { small: "" }
+                                                },
+                                                [_vm._v(_vm._s(language.icon))]
+                                              ),
+                                              _c("v-list-tile-title", [
+                                                _vm._v(_vm._s(language.name))
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        })
+                                      )
+                                    ],
+                                    1
+                                  )
+                                : _vm._e()
                             ],
                             2
                           )

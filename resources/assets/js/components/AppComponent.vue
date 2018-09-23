@@ -6,10 +6,20 @@
                     <v-list-tile v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
                         <v-list-tile-content>
                             <v-list-tile-title>
-                                <v-icon small class="mr-4">{{menu.icon}}</v-icon>{{ menu.name }}
+                                <v-icon small class="mr-4">{{menu.icon}}</v-icon>{{menu.name}}
                             </v-list-tile-title>
                         </v-list-tile-content>
                     </v-list-tile>
+                    <v-menu v-if="!isIndex" offset-y>
+                        <v-list-tile slot="activator" flat dark>
+                            <v-icon small class="mr-4">{{currentLanguage.icon}}</v-icon>{{currentLanguage.name}}
+                        </v-list-tile>
+                        <v-list>
+                            <v-list-tile v-for="(language, index) in languages" :key="index" :href="language.link" @click="true">
+                                <v-icon small class="mr-4">{{language.icon}}</v-icon><v-list-tile-title>{{ language.name }}</v-list-tile-title>
+                            </v-list-tile>
+                        </v-list>
+                    </v-menu>
                 </v-list>
             </v-navigation-drawer>
         </template>
@@ -22,8 +32,18 @@
                             <v-toolbar-items class="hidden-sm-and-down">
                                 <v-spacer></v-spacer>
                                 <v-btn flat dark v-for="menu in menus" :key="menu.name" @click="$vuetify.goTo(menu.target, {offset: menu.offset})">
-                                    <v-icon small class="mr-2">{{menu.icon}}</v-icon>{{ menu.name }}
+                                    <v-icon small class="mr-2">{{menu.icon}}</v-icon>{{menu.name}}
                                 </v-btn>
+                                <v-menu v-if="!isIndex" offset-y>
+                                    <v-btn slot="activator" flat dark>
+                                        <v-icon small class="mr-2">{{currentLanguage.icon}}</v-icon>{{currentLanguage.name}}
+                                    </v-btn>
+                                    <v-list>
+                                        <v-list-tile v-for="(language, index) in languages" :key="index" :href="language.link" @click="true">
+                                            <v-icon small class="mr-2">{{language.icon}}</v-icon><v-list-tile-title>{{ language.name }}</v-list-tile-title>
+                                        </v-list-tile>
+                                    </v-list>
+                                </v-menu>
                             </v-toolbar-items>
                         </v-flex>
                     </v-layout>
@@ -62,6 +82,10 @@
     data () {
       return {
         drawer: false,
+        languages: [
+          { name: "English", icon: "flag-icon flag-icon-us", link: "/en" },
+          { name: "Japanese", icon: "flag-icon flag-icon-jp", link: "/ja" },
+        ],
       }
     },
     created () {
@@ -69,6 +93,19 @@
         this.$i18n.locale = this.locale;
     },
     computed: {
+      currentLanguage () {
+        if (this.locale === "ja") {
+          return {
+            name: "Japanese",
+            icon: "flag-icon flag-icon-jp",
+          };
+        } else {
+          return {
+            name: "English",
+            icon: "flag-icon flag-icon-us",
+          };
+        }
+      },
       menus () {
         if (this.isIndex) {
             return [];
