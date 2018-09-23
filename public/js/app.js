@@ -68760,9 +68760,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -68899,24 +68896,31 @@ var render = function() {
                     _c("p", [
                       _vm._v(
                         "\n                        " +
-                          _vm._s(_vm.$t("messages.welcome")) +
+                          _vm._s(
+                            _vm.$t("Thank you for coming my portfolio site!")
+                          ) +
                           "\n                    "
                       )
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                        Thank you for coming my portfolio site!\n                    "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                        I have been working as a Web Engineer for fourth year."
+                        "\n                        " +
+                          _vm._s(
+                            _vm.$t(
+                              "I have been working as a Web Engineer for fourth year."
+                            )
+                          )
                       ),
                       _c("br"),
                       _vm._v(
-                        "\n                        Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.\n                    "
+                        "\n                        " +
+                          _vm._s(
+                            _vm.$t(
+                              "Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising."
+                            )
+                          ) +
+                          "\n                    "
                       )
                     ])
                   ]),
@@ -68933,7 +68937,11 @@ var render = function() {
                       _vm._v(" "),
                       _c("p", [
                         _vm._v(
-                          "My skill sets and those levels of understanding as below."
+                          _vm._s(
+                            _vm.$t(
+                              "My skill sets and those levels of understanding as below."
+                            )
+                          )
                         )
                       ]),
                       _vm._v(" "),
@@ -69166,7 +69174,11 @@ var render = function() {
                       _vm._v(" "),
                       _c("p", [
                         _vm._v(
-                          "If you have any questions, please feel free to contact me."
+                          _vm._s(
+                            _vm.$t(
+                              "If you have any questions, please feel free to contact me."
+                            )
+                          )
                         )
                       ]),
                       _vm._v(" "),
@@ -69222,7 +69234,13 @@ var render = function() {
                             [
                               _c("p", { staticClass: "mb-0" }, [
                                 _vm._v(
-                                  "\n                                Thank you for your inquiry. A confirmation email has been sent to your email.\n                            "
+                                  "\n                                " +
+                                    _vm._s(
+                                      _vm.$t(
+                                        "Thank you for your inquiry. A confirmation email has been sent to your email."
+                                      )
+                                    ) +
+                                    "\n                            "
                                 )
                               ])
                             ]
@@ -69234,7 +69252,13 @@ var render = function() {
                             [
                               _c("p", { staticClass: "mb-0" }, [
                                 _vm._v(
-                                  "\n                                An error occurred. Sorry, please try again later.\n                            "
+                                  "\n                                " +
+                                    _vm._s(
+                                      _vm.$t(
+                                        "An error occurred. Sorry, please try again later."
+                                      )
+                                    ) +
+                                    "\n                            "
                                 )
                               ])
                             ]
@@ -71289,10 +71313,16 @@ VueI18n.version = '8.1.0';
                 }
             },
             "attributes": []
-        },
-        "messages": {
-            "welcome": "Welcome to our application"
         }
+    },
+    "ja": {
+        "Thank you for coming my portfolio site!": "ポートフォリオサイトに来て頂き、ありがとうございます。",
+        "I have been working as a Web Engineer for fourth year.": "私はWebエンジニアとして働き初めて4年目です。",
+        "Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.": "今はPHPエンジニアとして、東京でWeb広告に関連したサービス開発の仕事をしています。",
+        "My skill sets and those levels of understanding as below.": "以下は私のスキルセットと理解度です。",
+        "If you have any questions, please feel free to contact me.": "もし何か質問がある場合は、お気軽にご連絡してください。",
+        "Thank you for your inquiry. A confirmation email has been sent to your email.": "お問い合わせありがとうございます。確認のメールを送信いたしました。",
+        "An error occurred. Sorry, please try again later.": "エラーが発生しました。申し訳ございませんが、後ほどもう1度お試しください。"
     }
 });
 

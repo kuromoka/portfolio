@@ -11,19 +11,16 @@
                     <v-flex xs12 about>
                         <h2 class="headline indigo--text text--darken-1">About</h2>
                         <p>
-                            {{ $t("messages.welcome") }}
+                            {{ $t("Thank you for coming my portfolio site!") }}
                         </p>
                         <p>
-                            Thank you for coming my portfolio site!
-                        </p>
-                        <p>
-                            I have been working as a Web Engineer for fourth year.<br>
-                            Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.
+                            {{ $t("I have been working as a Web Engineer for fourth year.") }}<br>
+                            {{ $t("Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.") }}
                         </p>
                     </v-flex>
                     <v-flex xs12 skills>
                         <h2 class="headline indigo--text text--darken-1">Skills</h2>
-                        <p>My skill sets and those levels of understanding as below.</p>
+                        <p>{{ $t("My skill sets and those levels of understanding as below.") }}</p>
                         <v-layout wrap align-center v-for="skill in skills" :key="skill.name">
                             <v-flex xs12 md2>
                                 <h3 class="title">{{ skill.name }}</h3>
@@ -66,7 +63,7 @@
                     </v-flex>
                     <v-flex xs12 mt-4 contact>
                         <h2 class="headline indigo--text text--darken-1">Contact</h2>
-                        <p>If you have any questions, please feel free to contact me.</p>
+                        <p>{{ $t("If you have any questions, please feel free to contact me.") }}</p>
                         <h3 class="title">GitHub / Twitter</h3>
                         <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
                         <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
@@ -74,12 +71,12 @@
                         <v-form ref="form" lazy-validation>
                             <v-alert :value="isSucceeded" type="success">
                                 <p class="mb-0">
-                                    Thank you for your inquiry. A confirmation email has been sent to your email.
+                                    {{ $t("Thank you for your inquiry. A confirmation email has been sent to your email.") }}
                                 </p>
                             </v-alert>
                             <v-alert :value="isAlerted" type="error">
                                 <p class="mb-0">
-                                    An error occurred. Sorry, please try again later.
+                                    {{ $t("An error occurred. Sorry, please try again later.") }}
                                 </p>
                             </v-alert>
                             <v-text-field color="secondary" v-model="name" label="Name" :error-messages="nameErrors"></v-text-field>
