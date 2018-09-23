@@ -16,7 +16,10 @@ class ProjectsTableSeeder extends Seeder
             [
                 'name' => 'Portfolio',
                 'image_name' => 'portfolio.jpg',
-                'description_ja' => '',
+                'description_ja' => <<< EOF
+このポートフォリオサイトで、SPAを適用しています。
+EOF
+,
                 'description_en' => <<< EOF
 This is this portfolio site and adopted SPA.
 EOF
@@ -29,7 +32,10 @@ EOF
             [
                 'name' => 'Cyger',
                 'image_name' => 'cyger.jpg',
-                'description_ja' => '',
+                'description_ja' =>  <<< EOF
+仮想通貨の価格を様々な取引所のAPIから取得することができる、Composerパッケージです。
+EOF
+,
                 'description_en' =>  <<< EOF
 This is a composer package to get cryptocurrency price from various exchange APIs.
 EOF
@@ -42,7 +48,11 @@ EOF
             [
                 'name' => 'YouTube Clone',
                 'image_name' => 'youtube_clone.jpg',
-                'description_ja' => '',
+                'description_ja' => <<< EOF
+<a href="https://chingu.io/" target="_blank">Chingu</a> に参加して、リモートのチームメンバーたちと一緒に作ったYouTubeのクローンサイトです<br>
+英語でSlackやGitHubで連絡を取り合っていました。
+EOF
+,
                 'description_en' => <<< EOF
 I joined in <a href="https://chingu.io/" target="_blank">Chingu</a> and built this YouTube clone site together with remote team members.<br>
 We were kept in touch by using Slack and GitHub in English.
