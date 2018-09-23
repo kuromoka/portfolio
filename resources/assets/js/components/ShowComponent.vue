@@ -11,6 +11,9 @@
                     <v-flex xs12 about>
                         <h2 class="headline indigo--text text--darken-1">About</h2>
                         <p>
+                            {{ $t("messages.welcome") }}
+                        </p>
+                        <p>
                             Thank you for coming my portfolio site!
                         </p>
                         <p>
