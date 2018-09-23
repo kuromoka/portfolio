@@ -65,6 +65,7 @@
       }
     },
     created () {
+        // Changed vue locale
         this.$i18n.locale = this.locale;
     },
     computed: {

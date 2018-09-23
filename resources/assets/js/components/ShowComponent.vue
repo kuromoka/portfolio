@@ -45,12 +45,12 @@
                                         <div class="content">
                                             <h3 class="headline mb-0">{{ project.name }}</h3>
                                             <h4>
-                                                Using skills:
+                                                {{ $t("Using skills:") }}
                                                 <span v-for="project_skill in project.project_skills" :key="project_skill.id">
                                                     {{ project_skill.name }}
                                                 </span>
                                             </h4>
-                                            <p class="mt-4" v-html="project.description_en"></p>
+                                            <p class="mt-4" v-html="project.description"></p>
                                         </div>
                                     </v-card-title>
                                     <v-card-actions>
@@ -170,7 +170,13 @@
     mounted () {
       axios
         .get('/api/projects')
-        .then(response => (this.projects = response.data));
+        .then(response => {
+            const projects = response.data.map(project => {
+                project['description'] = this.$i18n.locale === 'ja' ? project['description_ja'] : project['description_en'];
+                return project;
+            });
+            this.projects = projects;
+        });
     },
     methods: {
       submit () {

@@ -17,7 +17,7 @@ class ProjectsTableSeeder extends Seeder
                 'name' => 'Portfolio',
                 'image_name' => 'portfolio.jpg',
                 'description_ja' => <<< EOF
-このポートフォリオサイトで、SPAを適用しています。
+このポートフォリオサイトで、SPAを取り入れています。
 EOF
 ,
                 'description_en' => <<< EOF
@@ -49,7 +49,7 @@ EOF
                 'name' => 'YouTube Clone',
                 'image_name' => 'youtube_clone.jpg',
                 'description_ja' => <<< EOF
-<a href="https://chingu.io/" target="_blank">Chingu</a> に参加して、リモートのチームメンバーたちと一緒に作ったYouTubeのクローンサイトです<br>
+<a href="https://chingu.io/" target="_blank">Chingu</a> に参加してリモートのチームメンバーたちと一緒に作った、YouTubeのクローンサイトです。<br>
 英語でSlackやGitHubで連絡を取り合っていました。
 EOF
 ,
