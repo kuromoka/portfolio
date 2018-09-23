@@ -11,6 +11,7 @@ class ProjectSkillsTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('project_skills')->truncate();
         DB::table('project_skills')->insert([
             [
                 'project_id' => '1',
