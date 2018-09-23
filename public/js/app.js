@@ -70480,6 +70480,14 @@ var render = function() {
                           attrs: { flat: "", color: "secondary", href: "/en" }
                         },
                         [_vm._v("English")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { flat: "", color: "secondary", href: "/ja" }
+                        },
+                        [_vm._v("日本語")]
                       )
                     ],
                     1
