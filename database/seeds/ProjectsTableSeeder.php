@@ -11,6 +11,7 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('projects')->truncate();
         DB::table('projects')->insert([
             [
                 'name' => 'Portfolio',
@@ -39,11 +40,11 @@ EOF
                 'updated_at' => new Datetime(),
             ],
             [
-                'name' => 'Youtube Clone',
+                'name' => 'YouTube Clone',
                 'image_name' => 'youtube_clone.jpg',
                 'description_ja' => '',
                 'description_en' => <<< EOF
-I joined in <a href="https://chingu.io/" target="_blank">Ching</a> and built this YouTube clone site together with remote team members.<br>
+I joined in <a href="https://chingu.io/" target="_blank">Chingu</a> and built this YouTube clone site together with remote team members.<br>
 We were kept in touch by using Slack and GitHub in English.
 EOF
 ,
