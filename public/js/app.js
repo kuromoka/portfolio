@@ -70071,6 +70071,11 @@ exports.push([module.i, "@keyframes a{59%{margin-left:0}60%,80%{margin-left:2px}
         "If you have any questions, please feel free to contact me.": "もし何か質問がある場合は、お気軽にご連絡してください。",
         "Thank you for your inquiry. A confirmation email has been sent to your email.": "お問い合わせありがとうございます。確認のメールを送信いたしました。",
         "An error occurred. Sorry, please try again later.": "エラーが発生しました。申し訳ございませんが、後ほどもう1度お試しください。",
+        "Thank you for your inquiry.": "お問い合わせありがとうございます。",
+        "Your inquiry has been sent as below.": "以下のようにお問い合わせが送信されました。",
+        "I will reply within a few days as far as possible.": "できる限り、数日以内にご返信いたします。",
+        "Inquiry has been sent.": "お問い合わせがありました。",
+        "Please check the the following contents.": "以下の内容を確認してください。",
         "passwords": {
             "password": "パスワードは最低６文字で、確認項目と一致している必要があります。",
             "reset": "パスワードをリセットしました。",
@@ -70689,7 +70694,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       axios.post('api/inquiries', {
         name: this.name,
         email: this.email,
-        message: this.message
+        message: this.message,
+        locale: this.$i18n.locale
       }).then(function (response) {
         _this2.name = '';
         _this2.email = '';

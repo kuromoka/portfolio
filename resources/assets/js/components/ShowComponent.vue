@@ -170,9 +170,9 @@
     mounted () {
       axios
         .get('/api/projects', {
-            params: {
-                locale: this.$i18n.locale,
-            }
+          params: {
+            locale: this.$i18n.locale,
+          }
         })
         .then(response => (this.projects = response.data));
     },
@@ -190,6 +190,7 @@
             name: this.name,
             email: this.email,
             message: this.message,
+            locale: this.$i18n.locale,
           })
           .then(response => {
             this.name = '';
