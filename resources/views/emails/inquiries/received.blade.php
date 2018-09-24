@@ -1,7 +1,7 @@
 {{ $text_body }}
 
 Name:
-{{ $text_name }}.
+{{ $text_name }}
 
 E-mail:
 {{ $text_email }}

@@ -27,7 +27,7 @@ class InquiryReceived extends Mailable
      *
      * @var Inquiry
      */
-    protected $order;
+    protected $inquiry;
 
     /**
      * Create a new message instance.
