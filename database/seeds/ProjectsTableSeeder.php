@@ -17,11 +17,13 @@ class ProjectsTableSeeder extends Seeder
                 'name' => 'Portfolio',
                 'image_name' => 'portfolio.jpg',
                 'description_ja' => <<< EOF
-このポートフォリオサイトで、SPAを取り入れています。
+このポートフォリオサイトで、SPAを取り入れています。<br>
+英語と日本語に対応しています。
 EOF
 ,
                 'description_en' => <<< EOF
-This is this portfolio site and adopted SPA.
+This is this portfolio website and adopted SPA.<br>
+Supporting English and Japanese.
 EOF
 ,
                 'site_url' => '/',
@@ -33,7 +35,7 @@ EOF
                 'name' => 'Cyger',
                 'image_name' => 'cyger.jpg',
                 'description_ja' =>  <<< EOF
-仮想通貨の価格を様々な取引所のAPIから取得することができる、Composerパッケージです。
+仮想通貨の価格を様々な取引所のAPIから取得することができる、Composerのパッケージです。
 EOF
 ,
                 'description_en' =>  <<< EOF

@@ -53,7 +53,7 @@ class InquiryReceived extends Mailable
         $body = '';
         if ($this->type === self::CONFIRMATION_EMAIL) {
             $subject = __('Thank you for your inquiry.');
-            $body = __('Your inquiry has been sent as below.') . PHP_EOL . __('I will reply within a few days as far as possible.');
+            $body = __('Your inquiry has been sent the following contents.') . PHP_EOL . __('I will reply within a few days as far as possible.');
         } else if ($this->type === self::ADMIN_EMAIL) {
             $subject = __('Inquiry has been sent.');
             $body = __('Please check the the following contents.');

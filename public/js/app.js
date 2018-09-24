@@ -70063,16 +70063,16 @@ exports.push([module.i, "@keyframes a{59%{margin-left:0}60%,80%{margin-left:2px}
         }
     },
     "ja": {
-        "Thank you for coming my portfolio site!": "ポートフォリオサイトに来て頂き、ありがとうございます。",
-        "I have been working as a Web Engineer for fourth year.": "私はWebエンジニアとして働き初めて4年目です。",
-        "Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.": "今はPHPエンジニアとして、東京でWeb広告に関連したサービス開発の仕事をしています。",
-        "My skill sets and those levels of understanding as below.": "以下は私のスキルセットとその理解度です。",
+        "Thank you for coming my portfolio website!": "ポートフォリオサイトに来て頂き、ありがとうございます！",
+        "I'm a Web Engineer and work in Tokyo.": "私はWebエンジニアで、東京で働いています。",
+        "Currently, I'm developing service related to Web advertising as a PHP Engineer.": "現在はPHPエンジニアとして、Web広告に関連したサービス開発の仕事をしています。",
+        "My skill sets and those levels of understanding as below.": "以下は私のスキルセットとそれらの理解度です。",
         "Using skills:": "使用した技術:",
-        "If you have any questions, please feel free to contact me.": "もし何か質問がある場合は、お気軽にご連絡してください。",
+        "If you have any questions, please feel free to contact me.": "もし何かご質問がある場合は、お気軽にご連絡してください。",
         "Thank you for your inquiry. A confirmation email has been sent to your email.": "お問い合わせありがとうございます。確認のメールを送信いたしました。",
         "An error occurred. Sorry, please try again later.": "エラーが発生しました。申し訳ございませんが、後ほどもう1度お試しください。",
         "Thank you for your inquiry.": "お問い合わせありがとうございます。",
-        "Your inquiry has been sent as below.": "以下のようにお問い合わせが送信されました。",
+        "Your inquiry has been sent the following contents.": "以下の内容でお問い合わせが送信されました。",
         "I will reply within a few days as far as possible.": "できる限り、数日以内にご返信いたします。",
         "Inquiry has been sent.": "お問い合わせがありました。",
         "Please check the the following contents.": "以下の内容を確認してください。",
@@ -70810,7 +70810,7 @@ var render = function() {
                       _vm._v(
                         "\n                        " +
                           _vm._s(
-                            _vm.$t("Thank you for coming my portfolio site!")
+                            _vm.$t("Thank you for coming my portfolio website!")
                           ) +
                           "\n                    "
                       )
@@ -70820,9 +70820,7 @@ var render = function() {
                       _vm._v(
                         "\n                        " +
                           _vm._s(
-                            _vm.$t(
-                              "I have been working as a Web Engineer for fourth year."
-                            )
+                            _vm.$t("I'm a Web Engineer and work in Tokyo.")
                           )
                       ),
                       _c("br"),
@@ -70830,7 +70828,7 @@ var render = function() {
                         "\n                        " +
                           _vm._s(
                             _vm.$t(
-                              "Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising."
+                              "Currently, I'm developing service related to Web advertising as a PHP Engineer."
                             )
                           ) +
                           "\n                    "

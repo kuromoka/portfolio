@@ -11,11 +11,11 @@
                     <v-flex xs12 about>
                         <h2 class="headline indigo--text text--darken-1">About</h2>
                         <p>
-                            {{ $t("Thank you for coming my portfolio site!") }}
+                            {{ $t("Thank you for coming my portfolio website!") }}
                         </p>
                         <p>
-                            {{ $t("I have been working as a Web Engineer for fourth year.") }}<br>
-                            {{ $t("Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.") }}
+                            {{ $t("I'm a Web Engineer and work in Tokyo.") }}<br>
+                            {{ $t("Currently, I'm developing service related to Web advertising as a PHP Engineer.") }}
                         </p>
                     </v-flex>
                     <v-flex xs12 skills>
