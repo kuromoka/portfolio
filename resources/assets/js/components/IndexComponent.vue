@@ -10,7 +10,7 @@
                 <v-layout wrap>
                     <v-flex xs12 language>
                         <p>
-                            Thank you for coming my portfolio site!
+                            Thank you for coming my portfolio website!
                         </p>
                         <p>
                             Please select your language.
