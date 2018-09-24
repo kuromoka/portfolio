@@ -25440,7 +25440,8 @@ window.Vue = __webpack_require__(12);
 window.Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_i18n__["a" /* default */]);
 var i18n = new __WEBPACK_IMPORTED_MODULE_0_vue_i18n__["a" /* default */]({
     locale: 'en',
-    messages: __WEBPACK_IMPORTED_MODULE_5__vue_i18n_locales_generated__["a" /* default */]
+    messages: __WEBPACK_IMPORTED_MODULE_5__vue_i18n_locales_generated__["a" /* default */],
+    silentTranslationWarn: true
 });
 
 window.Vue.use(__WEBPACK_IMPORTED_MODULE_2_vuetify___default.a, {

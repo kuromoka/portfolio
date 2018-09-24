@@ -82,7 +82,7 @@
                             <v-text-field color="secondary" v-model="name" label="Name" :error-messages="nameErrors"></v-text-field>
                             <v-text-field color="secondary" v-model="email" label="E-mail" :error-messages="emailErrors"></v-text-field>
                             <v-textarea color="secondary" v-model="message" label="Message" :error-messages="messageErrors"></v-textarea>
-                            <v-btn color="secondary" :disabled=isDisabled @click="submit">Submit</v-btn>
+                            <v-btn color="secondary" :disabled="isDisabled" @click="submit">Submit</v-btn>
                         </v-form>
                     </v-flex>
                 </v-layout>

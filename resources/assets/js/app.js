@@ -19,6 +19,7 @@ window.Vue.use(VueI18n);
 const i18n = new VueI18n({
     locale: 'en',
     messages: Locale,
+    silentTranslationWarn: true,
 });
 
 window.Vue.use(Vuetify, {
