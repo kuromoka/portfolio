@@ -8,10 +8,19 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import VueI18n from 'vue-i18n';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Vuetify from 'vuetify';
 import colors from 'vuetify/es5/util/colors'
 import 'vuetify/dist/vuetify.min.css';
+import Locale from './vue-i18n-locales.generated';
+
+window.Vue.use(VueI18n);
+const i18n = new VueI18n({
+    locale: 'en',
+    messages: Locale,
+    silentTranslationWarn: true,
+});
 
 window.Vue.use(Vuetify, {
     theme: {
@@ -30,5 +39,6 @@ Vue.component('app-component', require('./components/AppComponent.vue'));
 
 const app = new Vue({
     el: '#app',
+    i18n: i18n,
     iconfont: 'fa',
 });

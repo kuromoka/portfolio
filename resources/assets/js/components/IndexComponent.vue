@@ -16,6 +16,7 @@
                             Please select your language.
                         </p>
                         <v-btn flat color="secondary" href="/en">English</v-btn>
+                        <v-btn flat color="secondary" href="/ja">日本語</v-btn>
                     </v-flex>
                 </v-layout>
             </v-flex>

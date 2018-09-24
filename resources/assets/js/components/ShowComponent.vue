@@ -11,16 +11,16 @@
                     <v-flex xs12 about>
                         <h2 class="headline indigo--text text--darken-1">About</h2>
                         <p>
-                            Thank you for coming my portfolio site!
+                            {{ $t("Thank you for coming my portfolio website!") }}
                         </p>
                         <p>
-                            I have been working as a Web Engineer for fourth year.<br>
-                            Now I'm working as a PHP Engineer in Tokyo and developing service related to Web advertising.
+                            {{ $t("I'm a Web Engineer and work in Tokyo.") }}<br>
+                            {{ $t("Currently, I'm developing service related to Web advertising as a PHP Engineer.") }}
                         </p>
                     </v-flex>
                     <v-flex xs12 skills>
                         <h2 class="headline indigo--text text--darken-1">Skills</h2>
-                        <p>My skill sets and those levels of understanding as below.</p>
+                        <p>{{ $t("My skill sets and those levels of understanding as below.") }}</p>
                         <v-layout wrap align-center v-for="skill in skills" :key="skill.name">
                             <v-flex xs12 md2>
                                 <h3 class="title">{{ skill.name }}</h3>
@@ -45,12 +45,12 @@
                                         <div class="content">
                                             <h3 class="headline mb-0">{{ project.name }}</h3>
                                             <h4>
-                                                Using skills:
+                                                {{ $t("Using skills:") }}
                                                 <span v-for="project_skill in project.project_skills" :key="project_skill.id">
                                                     {{ project_skill.name }}
                                                 </span>
                                             </h4>
-                                            <p class="mt-4" v-html="project.description_en"></p>
+                                            <p class="mt-4" v-html="project.description"></p>
                                         </div>
                                     </v-card-title>
                                     <v-card-actions>
@@ -63,7 +63,7 @@
                     </v-flex>
                     <v-flex xs12 mt-4 contact>
                         <h2 class="headline indigo--text text--darken-1">Contact</h2>
-                        <p>If you have any questions, please feel free to contact me.</p>
+                        <p>{{ $t("If you have any questions, please feel free to contact me.") }}</p>
                         <h3 class="title">GitHub / Twitter</h3>
                         <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
                         <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
@@ -71,18 +71,18 @@
                         <v-form ref="form" lazy-validation>
                             <v-alert :value="isSucceeded" type="success">
                                 <p class="mb-0">
-                                    Thank you for your inquiry. A confirmation email has been sent to your email.
+                                    {{ $t("Thank you for your inquiry. A confirmation email has been sent to your email.") }}
                                 </p>
                             </v-alert>
                             <v-alert :value="isAlerted" type="error">
                                 <p class="mb-0">
-                                    An error occurred. Sorry, please try again later.
+                                    {{ $t("An error occurred. Sorry, please try again later.") }}
                                 </p>
                             </v-alert>
                             <v-text-field color="secondary" v-model="name" label="Name" :error-messages="nameErrors"></v-text-field>
                             <v-text-field color="secondary" v-model="email" label="E-mail" :error-messages="emailErrors"></v-text-field>
                             <v-textarea color="secondary" v-model="message" label="Message" :error-messages="messageErrors"></v-textarea>
-                            <v-btn color="secondary" :disabled=isDisabled @click="submit">Submit</v-btn>
+                            <v-btn color="secondary" :disabled="isDisabled" :loading="isLoading" @click="submit">Submit</v-btn>
                         </v-form>
                     </v-flex>
                 </v-layout>
@@ -156,6 +156,7 @@
         emailErrors: [],
         message: '',
         messageErrors: [],
+        isLoading: false,
       }
     },
     computed: {
@@ -169,23 +170,28 @@
     },
     mounted () {
       axios
-        .get('/api/projects')
+        .get('/api/projects', {
+          params: {
+            locale: this.$i18n.locale,
+          }
+        })
         .then(response => (this.projects = response.data));
     },
     methods: {
       submit () {
-        this.isDisabled = true;
         this.isSucceeded = false;
         this.isAlerted = false;
         this.nameErrors = [];
         this.emailErrors = [];
         this.messageErrors = [];
+        this.isLoading = true;
 
         axios
           .post('api/inquiries', {
             name: this.name,
             email: this.email,
             message: this.message,
+            locale: this.$i18n.locale,
           })
           .then(response => {
             this.name = '';
@@ -202,12 +208,13 @@
               this.messageErrors = typeof errors.message !== 'undefined' ? errors.message : [];
             } else {
               // Other errors
+              this.isAlerted = true;
               this.name = '';
               this.email = '';
               this.message = '';
-              this.isAlerted = true;
             }
-          });
+          })
+          .finally(() => this.isLoading = false);
       }
     }
   }

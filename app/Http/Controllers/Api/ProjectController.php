@@ -14,6 +14,13 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return Project::with('project_skills')->get();;
+        $projects = Project::with('project_skills')->get();
+        if (count($projects) > 0) {
+            foreach ($projects as $key => $value) {
+                $projects[$key]['description'] = \App::isLocale('ja') ? $projects[$key]['description_ja'] : $projects[$key]['description_en'];
+            }
+        }
+
+        return $projects;
     }
 }

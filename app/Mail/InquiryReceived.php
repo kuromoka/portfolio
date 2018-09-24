@@ -52,11 +52,11 @@ class InquiryReceived extends Mailable
         $subject = '';
         $body = '';
         if ($this->type === self::CONFIRMATION_EMAIL) {
-            $subject = 'Thank you for your inquiry.';
-            $body = 'Your inquiry has been sent as below.' . PHP_EOL . 'I will reply within a few days as far as possible.';
+            $subject = __('Thank you for your inquiry.');
+            $body = __('Your inquiry has been sent the following contents.') . PHP_EOL . __('I will reply within a few days as far as possible.');
         } else if ($this->type === self::ADMIN_EMAIL) {
-            $subject = 'Inquiry has been sent.';
-            $body = 'Please check the the following contents.';
+            $subject = __('Inquiry has been sent.');
+            $body = __('Please check the the following contents.');
         }
 
         return $this->subject($subject)

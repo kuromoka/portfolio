@@ -7,7 +7,7 @@ This is my portfolio site repository.
 https://portfolio.kuromoworks.com/en  
 
 - Japanese Page  
-In Progress
+https://portfolio.kuromoworks.com/ja  
 
 - Language Selection Page  
 https://portfolio.kuromoworks.com
