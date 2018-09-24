@@ -15,8 +15,8 @@
                             <v-icon small class="mr-4">{{currentLanguage.icon}}</v-icon>{{currentLanguage.name}}
                         </v-list-tile>
                         <v-list>
-                            <v-list-tile v-for="(language, index) in languages" :key="index" :href="language.link" @click="true">
-                                <v-icon small class="mr-4">{{language.icon}}</v-icon><v-list-tile-title>{{ language.name }}</v-list-tile-title>
+                            <v-list-tile v-for="language in languages" :key="language.name" :href="language.link">
+                                <v-icon small class="mr-4">{{language.icon}}</v-icon><v-list-tile-title>{{language.name}}</v-list-tile-title>
                             </v-list-tile>
                         </v-list>
                     </v-menu>
@@ -39,8 +39,8 @@
                                         <v-icon small class="mr-2">{{currentLanguage.icon}}</v-icon>{{currentLanguage.name}}
                                     </v-btn>
                                     <v-list>
-                                        <v-list-tile v-for="(language, index) in languages" :key="index" :href="language.link" @click="true">
-                                            <v-icon small class="mr-2">{{language.icon}}</v-icon><v-list-tile-title>{{ language.name }}</v-list-tile-title>
+                                        <v-list-tile v-for="language in languages" :key="language.name" :href="language.link">
+                                            <v-icon small class="mr-2">{{language.icon}}</v-icon><v-list-tile-title>{{language.name}}</v-list-tile-title>
                                         </v-list-tile>
                                     </v-list>
                                 </v-menu>

@@ -70698,7 +70698,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       email: '',
       emailErrors: [],
       message: '',
-      messageErrors: []
+      messageErrors: [],
+      isLoading: false
     };
   },
 
@@ -70727,12 +70728,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     submit: function submit() {
       var _this2 = this;
 
-      this.isDisabled = true;
       this.isSucceeded = false;
       this.isAlerted = false;
       this.nameErrors = [];
       this.emailErrors = [];
       this.messageErrors = [];
+      this.isLoading = true;
 
       axios.post('api/inquiries', {
         name: this.name,
@@ -70753,11 +70754,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           _this2.messageErrors = typeof errors.message !== 'undefined' ? errors.message : [];
         } else {
           // Other errors
+          _this2.isAlerted = true;
           _this2.name = '';
           _this2.email = '';
           _this2.message = '';
-          _this2.isAlerted = true;
         }
+      }).finally(function () {
+        return _this2.isLoading = false;
       });
     }
   }
@@ -71230,7 +71233,8 @@ var render = function() {
                             {
                               attrs: {
                                 color: "secondary",
-                                disabled: _vm.isDisabled
+                                disabled: _vm.isDisabled,
+                                loading: _vm.isLoading
                               },
                               on: { click: _vm.submit }
                             },
@@ -71406,13 +71410,12 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "v-list",
-                              _vm._l(_vm.languages, function(language, index) {
+                              _vm._l(_vm.languages, function(language) {
                                 return _c(
                                   "v-list-tile",
                                   {
-                                    key: index,
-                                    attrs: { href: language.link },
-                                    on: { click: true }
+                                    key: language.name,
+                                    attrs: { href: language.link }
                                   },
                                   [
                                     _c(
@@ -71553,15 +71556,13 @@ var render = function() {
                                       _c(
                                         "v-list",
                                         _vm._l(_vm.languages, function(
-                                          language,
-                                          index
+                                          language
                                         ) {
                                           return _c(
                                             "v-list-tile",
                                             {
-                                              key: index,
-                                              attrs: { href: language.link },
-                                              on: { click: true }
+                                              key: language.name,
+                                              attrs: { href: language.link }
                                             },
                                             [
                                               _c(
