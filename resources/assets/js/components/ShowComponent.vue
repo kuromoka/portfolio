@@ -54,7 +54,7 @@
                                         </div>
                                     </v-card-title>
                                     <v-card-actions>
-                                        <v-btn flat color="secondary" :href="project.site_url" target="_blank">Site</v-btn>
+                                        <v-btn flat color="secondary" :href="project.site_url" target="_blank">Website</v-btn>
                                         <v-btn flat color="secondary" :href="project.github_url" target="_blank">GitHub</v-btn>
                                     </v-card-actions>
                                 </v-card>
