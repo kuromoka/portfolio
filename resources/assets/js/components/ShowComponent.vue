@@ -82,7 +82,7 @@
                             <v-text-field color="secondary" v-model="name" label="Name" :error-messages="nameErrors"></v-text-field>
                             <v-text-field color="secondary" v-model="email" label="E-mail" :error-messages="emailErrors"></v-text-field>
                             <v-textarea color="secondary" v-model="message" label="Message" :error-messages="messageErrors"></v-textarea>
-                            <v-btn color="secondary" :disabled="isDisabled" @click="submit">Submit</v-btn>
+                            <v-btn color="secondary" :disabled="isDisabled" :loading="isLoading" @click="submit">Submit</v-btn>
                         </v-form>
                     </v-flex>
                 </v-layout>
@@ -156,6 +156,7 @@
         emailErrors: [],
         message: '',
         messageErrors: [],
+        isLoading: false,
       }
     },
     computed: {
@@ -178,12 +179,12 @@
     },
     methods: {
       submit () {
-        this.isDisabled = true;
         this.isSucceeded = false;
         this.isAlerted = false;
         this.nameErrors = [];
         this.emailErrors = [];
         this.messageErrors = [];
+        this.isLoading = true;
 
         axios
           .post('api/inquiries', {
@@ -207,12 +208,13 @@
               this.messageErrors = typeof errors.message !== 'undefined' ? errors.message : [];
             } else {
               // Other errors
+              this.isAlerted = true;
               this.name = '';
               this.email = '';
               this.message = '';
-              this.isAlerted = true;
             }
-          });
+          })
+          .finally(() => this.isLoading = false);
       }
     }
   }
