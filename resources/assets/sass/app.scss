@@ -125,16 +125,35 @@ p {
 
   .contact {
     .github {
+      padding: 0;
+      margin: 0 15px 0 0;
+      font-size: 1.0rem;
+      text-decoration: none;
+
       i {
         color: #000;
       }
     }
   
     .twitter {
-      margin-left: 5px;
-  
+      padding: 0;
+      margin: 0 15px 0 0;
+      font-size: 1.0rem;
+      text-decoration: none;
+
       i {
         color: #55acee;
+      }
+    }
+
+    .stackoverflow {
+      padding: 0;
+      margin: 0 0 0 0;
+      font-size: 1.0rem;
+      text-decoration: none;
+
+      i {
+        color: #ef8236;
       }
     }
 

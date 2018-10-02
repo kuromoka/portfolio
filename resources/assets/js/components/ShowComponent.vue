@@ -64,9 +64,10 @@
                     <v-flex xs12 mt-4 contact>
                         <h2 class="headline indigo--text text--darken-1">Contact</h2>
                         <p>{{ $t("If you have any questions, please feel free to contact me.") }}</p>
-                        <h3 class="title">GitHub / Twitter</h3>
-                        <a href="https://github.com/kuromoka" target="_blank" class="github"><v-icon large>fab fa-github-square</v-icon></a>
-                        <a href="https://twitter.com/kuromoka16" target="_blank" class="twitter"><v-icon large>fab fa-twitter-square</v-icon></a>
+                        <h3 class="title mb-2">Accounts</h3>
+                        <a v-for="account in accounts" :key="account.name" :class="'d-inline-flex align-center ' + account.className" :href="account.link" target="_blank">
+                            <v-icon medium class="mr-2">{{account.icon}}</v-icon>{{account.name}}
+                        </a>
                         <h3 class="title mt-3">Form</h3>
                         <v-form ref="form" lazy-validation>
                             <v-alert :value="isSucceeded" type="success">
@@ -148,6 +149,11 @@
           },
         ],
         projects: null,
+        accounts: [
+          { name: "GitHub", icon: "fab fa-github-square", className: "github", link: "https://github.com/kuromoka" },
+          { name: "Twitter", icon: "fab fa-twitter-square", className: "twitter", link: "https://twitter.com/kuromoka16" },
+          { name: "Stack Overflow", icon: "fab fa-stack-overflow", className: "stackoverflow", link: "https://stackoverflow.com/users/9984576/kuromoka" },
+        ],
         isSucceeded: false,
         isAlerted: false,
         name: '',
