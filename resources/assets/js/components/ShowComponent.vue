@@ -112,7 +112,7 @@
               { name: "CakePHP", value: 60 },
               { name: "PHPUnit", value: 60 },
               { name: "Composer", value: 60 },
-              { name: "Laravel", value: 40 },
+              { name: "Laravel", value: 60 },
             ],
           },
           {
@@ -121,8 +121,8 @@
             details: [
               { name: "JavaScript", value: 80 },
               { name: "jQuery", value: 80 },
+              { name: "Vue.js", value: 60 },
               { name: "React", value: 40 },
-              { name: "Vue.js", value: 40 },
             ],
           },
           {
