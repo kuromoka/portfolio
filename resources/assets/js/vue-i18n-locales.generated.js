@@ -126,7 +126,7 @@ export default {
     "ja": {
         "Thank you for coming my portfolio website!": "ポートフォリオサイトに来て頂き、ありがとうございます！",
         "I'm a Web Engineer and work in Tokyo.": "私はWebエンジニアで、東京で働いています。",
-        "Currently, I'm developing service related to Web advertising as a PHP Engineer.": "現在はPHPエンジニアとして、Web広告に関連したサービス開発の仕事をしています。",
+        "Currently, I'm developing Web Services as a PHP Engineer.": "現在はPHPエンジニアとして、Webサービス開発の仕事をしています。",
         "My skill sets and those levels of understanding as below.": "以下は私のスキルセットとそれらの理解度です。",
         "Using skills:": "使用した技術:",
         "If you have any questions, please feel free to contact me.": "もし何かご質問がある場合は、お気軽にご連絡してください。",

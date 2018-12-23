@@ -15,7 +15,7 @@
                         </p>
                         <p>
                             {{ $t("I'm a Web Engineer and work in Tokyo.") }}<br>
-                            {{ $t("Currently, I'm developing service related to Web advertising as a PHP Engineer.") }}
+                            {{ $t("Currently, I'm developing Web Services as a PHP Engineer.") }}
                         </p>
                     </v-flex>
                     <v-flex xs12 skills>
