@@ -35,7 +35,7 @@ window.Vue.use(Vuetify, {
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('app-component', require('./components/AppComponent.vue'));
+Vue.component('app-component', require('./components/AppComponent.vue').default);
 
 const app = new Vue({
     el: '#app',
