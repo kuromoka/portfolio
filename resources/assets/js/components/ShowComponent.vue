@@ -40,7 +40,7 @@
                         <v-layout wrap>
                             <v-flex xs12 md4 v-for="(project, index) in projects" :key="project.id" :class="{'center-px': index === 1}">
                                 <v-card>
-                                    <v-card-media :src="'/images/' + project.image_name" height="200px"></v-card-media>
+                                    <v-img :src="'/images/' + project.image_name" height="200px"></v-img>
                                     <v-card-title primary-title>
                                         <div class="content">
                                             <h3 class="headline mb-0">{{ project.name }}</h3>
